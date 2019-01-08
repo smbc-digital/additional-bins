@@ -6,6 +6,10 @@ class Provider extends Component{
 	constructor(props){
 		super(props)
 		this.state = {
+			doYouRecycle : {
+				value: '',
+				isValid: false
+			},
 			onChange: this.onChange
 		}
 	}
