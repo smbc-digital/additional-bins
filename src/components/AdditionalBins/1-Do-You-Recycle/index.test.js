@@ -26,23 +26,24 @@ describe('DoYouRecycle', () => {
         expect(history.push).toHaveBeenCalledWith(getPageRoute(8))
     })
     
-    // it('should push to correct page when answer is No, What can i recycle', () => {
-	// 	// Arrange
-	// 	const history = { push: jest.fn() }
-    //     const context = {
-    //         doYouRecycle: {
-    //             value: 'what-can-i-recycle',
-    //             isValid : true
-    //         }
-    //     }
+    it('should push to correct page when answer is No, What can i recycle', () => {
+        // Arrange
+        window.location.assign = jest.fn()
+		const history = { push: jest.fn() }
+        const context = {
+            doYouRecycle: {
+                value: 'what-can-i-recycle',
+                isValid : true
+            }
+        }
 
-	// 	// Act
-    //     const wrapper = mount(<DoYouRecycle history={history} context={context} />)
+		// Act
+        const wrapper = mount(<DoYouRecycle history={history} context={context} />)
     
-    //     // Assert
-    //     wrapper.find('form').simulate('submit')
-    //     expect(history.push).toHaveBeenCalledWith(getPageRoute(8))
-    // })
+        // Assert
+        wrapper.find('form').simulate('submit')
+        expect(window.location.assign).toBeCalledWith('https://www.stockport.gov.uk/what-you-can-put-in-your-bins')
+    })
     
     it('should push to correct page when answer is Yes', () => {
 		// Arrange

@@ -29,11 +29,10 @@ export const DoYouRecycle = ({ context: { onChange, doYouRecycle }, history}) =>
 
 	const onSubmit = event => {
 		event.preventDefault()
-		console.log(doYouRecycle.value)
 		if(doYouRecycle.value === 'not-enough-space') {
 			history.push(getPageRoute(8))
 		} else if(doYouRecycle.value === 'what-can-i-recycle'){
-			window.location.replace('https://www.stockport.gov.uk/what-you-can-put-in-your-bins')
+			window.location.assign('https://www.stockport.gov.uk/what-you-can-put-in-your-bins')
 		} else {
 			history.push(getPageRoute(2))
 		}
