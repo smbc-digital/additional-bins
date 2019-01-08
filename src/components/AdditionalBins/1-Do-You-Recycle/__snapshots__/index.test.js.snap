@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DoYouRecycle snapshot renders correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <h1>
+    Request an additional black bin
+  </h1>
+  <h2>
+    Do you recycle as much as possible?
+  </h2>
+  <fieldset>
+    <div
+      className="input-radio-container"
+    >
+      <input
+        defaultChecked={false}
+        disabled={undefined}
+        id="not-enough-space"
+        name="doYouRecycle"
+        onChange={[Function]}
+        type="radio"
+        value="not-enough-space"
+      />
+      <label
+        htmlFor="not-enough-space"
+      >
+        No, I want to but there's not enough space in my recycling bins
+      </label>
+    </div>
+    <div
+      className="input-radio-container"
+    >
+      <input
+        defaultChecked={false}
+        disabled={undefined}
+        id="what-can-i-recycle"
+        name="doYouRecycle"
+        onChange={[Function]}
+        type="radio"
+        value="what-can-i-recycle"
+      />
+      <label
+        htmlFor="what-can-i-recycle"
+      >
+        No, I don't know what I can recycle
+      </label>
+    </div>
+    <div
+      className="input-radio-container"
+    >
+      <input
+        defaultChecked={false}
+        disabled={undefined}
+        id="Yes"
+        name="doYouRecycle"
+        onChange={[Function]}
+        type="radio"
+        value="true"
+      />
+      <label
+        htmlFor="Yes"
+      >
+        Yes
+      </label>
+    </div>
+  </fieldset>
+  <button
+    className="button-primary"
+    disabled={true}
+    type="submit"
+  >
+    Next step
+  </button>
+</form>
+`;

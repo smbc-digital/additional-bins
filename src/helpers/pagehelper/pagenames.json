@@ -2,5 +2,17 @@
 	{
 		"number": 1,
 		"route": "/additional-bins/do-you-recycle"
+	},
+	{
+		"number": 2,
+		"route":"/additional-bins/need-more-space"
+	},
+	{
+		"number": 3,
+		"route":"/additional-bins/tell-us-about-yourself"
+	},
+	{
+		"number": 8,
+		"route":"/additional-bins/order-recycling-bins"
 	}
 ]

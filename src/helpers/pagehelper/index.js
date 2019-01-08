@@ -5,3 +5,5 @@ export const getPageRoute = (pageNumber) => {
 
     return page.route
 }
+
+export default getPageRoute

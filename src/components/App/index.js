@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Switch, Route } from 'react-router'
 import { getPageRoute } from '../../helpers/pagehelper'
 import { ErrorPage } from 'smbc-react-components'
-import { DoYouRecycle } from '../AdditionalBins/1-Do-You-Recycle'
+import DoYouRecycle from '../AdditionalBins/1-Do-You-Recycle'
 
 class App extends Component {
     render() {
