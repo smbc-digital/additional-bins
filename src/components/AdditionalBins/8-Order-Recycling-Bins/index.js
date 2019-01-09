@@ -1,11 +1,10 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import {  Button, Anchor } from 'smbc-react-components'
-import { getPageRoute } from '../../../helpers/pagehelper'
 import withContext from '../../WithContext'
 
 
-export const OrderRecyclingBins = ({ context: {onChange, orderRecyclingBins}, history }) => {
+export const OrderRecyclingBins = ({ context: {}, history }) => {
 
 
 const onSubmit = event => {

@@ -2,8 +2,7 @@ import React from 'react'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { OrderRecyclingBins } from './index'
-//import renderer from 'react-test-renderer'
-import getPageRoute from '../../../helpers/pagehelper'
+import renderer from 'react-test-renderer'
 
 
 Enzyme.configure({ adapter: new Adapter() })
@@ -26,5 +25,18 @@ describe('OrderRecyclingBins',() => {
         // Assert
         wrapper.find('form').simulate('submit')
         expect(window.location.assign).toBeCalledWith('https://www.stockport.gov.uk/start/additional-recycling-bins')
+    })
+
+    
+    describe('snapshot', () => {
+        it('renders correctly', () => {
+            const context = {}
+
+            const tree = renderer
+                .create(<OrderRecyclingBins context={context} />)
+                .toJSON()
+                
+            expect(tree).toMatchSnapshot()
+        })
     })
 })
