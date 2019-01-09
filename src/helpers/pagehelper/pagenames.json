@@ -1,18 +1,18 @@
 [
 	{
 		"number": 1,
-		"route": "/additional-bins/do-you-recycle"
+		"route": "/additional-black-bin/do-you-recycle"
 	},
 	{
 		"number": 2,
-		"route":"/additional-bins/need-more-space"
+		"route":"/additional-black-bin/need-more-space"
 	},
 	{
 		"number": 3,
-		"route":"/additional-bins/tell-us-about-yourself"
+		"route":"/additional-black-bin/tell-us-about-yourself"
 	},
 	{
 		"number": 8,
-		"route":"/additional-bins/order-recycling-bins"
+		"route":"/additional-black-bin/order-recycling-bins"
 	}
 ]
