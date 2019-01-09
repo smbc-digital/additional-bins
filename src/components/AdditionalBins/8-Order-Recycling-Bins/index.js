@@ -4,7 +4,7 @@ import {  Button, Anchor } from 'smbc-react-components'
 import withContext from '../../WithContext'
 
 
-export const OrderRecyclingBins = ({ context: {}, history }) => {
+export const OrderRecyclingBins = ({ history }) => {
 
 
 const onSubmit = event => {

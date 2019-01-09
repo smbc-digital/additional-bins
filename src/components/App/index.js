@@ -4,7 +4,7 @@ import { getPageRoute } from '../../helpers/pagehelper'
 import { ErrorPage } from 'smbc-react-components'
 import DoYouRecycle from '../AdditionalBins/1-Do-You-Recycle'
 import WhyMoreSpace from '../AdditionalBins/2-Why-More-Space'
-import OrderRecyclingBins from '../AdditionalBins/8-Order-Recycling-Bins';
+import OrderRecyclingBins from '../AdditionalBins/8-Order-Recycling-Bins'
 
 class App extends Component {
     render() {
