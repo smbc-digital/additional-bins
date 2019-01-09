@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WhyMoreSpace snapshot renders correctly 1`] = `
+Array [
+  <form
+    onSubmit={[Function]}
+  >
+    <h1>
+      Request an additional black bin
+    </h1>
+    <h2>
+      Select the main reason you need more space in your black bin
+    </h2>
+    <fieldset>
+      <div
+        className="input-radio-container"
+      >
+        <input
+          defaultChecked={false}
+          disabled={undefined}
+          id="disposable-nappies"
+          name="whyMoreSpace"
+          onChange={[Function]}
+          type="radio"
+          value="disposable-nappies"
+        />
+        <label
+          htmlFor="disposable-nappies"
+        >
+          Disposable nappies
+        </label>
+      </div>
+      <div
+        className="input-radio-container"
+      >
+        <input
+          defaultChecked={false}
+          disabled={undefined}
+          id="medical-healthcare"
+          name="whyMoreSpace"
+          onChange={[Function]}
+          type="radio"
+          value="medical-healthcare"
+        />
+        <label
+          htmlFor="medical-healthcare"
+        >
+          Medical or healthcare waste
+        </label>
+      </div>
+      <div
+        className="input-radio-container"
+      >
+        <input
+          defaultChecked={false}
+          disabled={undefined}
+          id="more-people"
+          name="whyMoreSpace"
+          onChange={[Function]}
+          type="radio"
+          value="more-people"
+        />
+        <label
+          htmlFor="more-people"
+        >
+          There are 6 or more people in the house
+        </label>
+      </div>
+      <div
+        className="input-radio-container"
+      >
+        <input
+          defaultChecked={false}
+          disabled={undefined}
+          id="other"
+          name="whyMoreSpace"
+          onChange={[Function]}
+          type="radio"
+          value="other"
+        />
+        <label
+          htmlFor="other"
+        >
+          Other
+        </label>
+      </div>
+    </fieldset>
+    <button
+      className="button-primary"
+      disabled={true}
+      type="submit"
+    >
+      Next step
+    </button>
+  </form>,
+  <p>
+    <a
+      href="#"
+      onClick={[Function]}
+    >
+      Previous
+    </a>
+  </p>,
+]
+`;
