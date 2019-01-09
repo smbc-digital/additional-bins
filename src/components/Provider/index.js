@@ -18,6 +18,10 @@ class Provider extends Component{
 				value: '',
 				isValid: false
 			},
+			orderRecyclingBins : {
+				value: '',
+				isValid: false
+			},
 			onChange: this.onChange
 		}
 	}
