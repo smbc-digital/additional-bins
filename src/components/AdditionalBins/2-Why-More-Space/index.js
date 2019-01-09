@@ -43,7 +43,7 @@ export const WhyMoreSpace = ({ context: { onChange, whyMoreSpace, whyMoreSpaceOt
 
     const onSubmit = event => {
         event.preventDefault()
-        history.push(getPageRoute(3))
+        history.push(getPageRoute(8))
     }
 
     return (

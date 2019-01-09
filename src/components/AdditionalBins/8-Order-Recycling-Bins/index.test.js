@@ -8,25 +8,23 @@ import getPageRoute from '../../../helpers/pagehelper'
 
 Enzyme.configure({ adapter: new Adapter() })
 describe('OrderRecyclingBins',() => { 
-    it('should render active button', () => {
+
+    it('should push to correct page', () => {
         // Arrange
-        const context = { 
-            whyMoreSpace: {
-                value: '',
-                isValid : false
-            },
-            whyMoreSpaceOther: {
-                value: '',
-                isValid: false
+        window.location.assign = jest.fn()
+		const history = { push: jest.fn() }
+        const context = {
+            doYouRecycle: {
+                value: 'test',
+                isValid : true
             }
         }
-        const wrapper = mount(<OrderRecyclingBins history={{}} context={context} />)
 
+		// Act
+        const wrapper = mount(<OrderRecyclingBins history={history} context={context} />)
+    
         // Assert
-        expect(wrapper.find('.button-primary').exists())
+        wrapper.find('form').simulate('submit')
+        expect(window.location.assign).toBeCalledWith('https://www.stockport.gov.uk/start/additional-recycling-bins')
     })
-
-   
-
-
 })

@@ -10,7 +10,7 @@ export const OrderRecyclingBins = ({ context: {onChange, orderRecyclingBins}, hi
 
 const onSubmit = event => {
     event.preventDefault()
-    window.URL = 'https://www.stockport.gov.uk/start/additional-recycling-bins'
+    window.location.assign('https://www.stockport.gov.uk/start/additional-recycling-bins')
 }
 
 
@@ -25,9 +25,9 @@ const onSubmit = event => {
                     <li>have more space in your black bin for your non-recyclable waste</li>
                 </ul>
                 <p>Use the button below to order additional recycling bins.</p>          
-                <a className='button-primary' href='www.stockport.gov.uk/start/additional-recycling-bins'>
+                <Button className='button-primary' isValid = {true}>
                 Order additional recycling bins
-                </a>                             
+                </Button>                             
             </form>        
             <Anchor label='Previous' history={history} />
         </Fragment>
