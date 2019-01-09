@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import withContext from '../../WithContext'
 import { getPageRoute } from '../../../helpers/pagehelper'
-import { RadioInputsContainer, TextInputContainer, Button, Anchor } from 'smbc-react-components'
+import { RadioInputsContainer, TextAreaInputContainer, Button, Anchor } from 'smbc-react-components'
 
 export const WhyMoreSpace = ({ context: { onChange, whyMoreSpace, whyMoreSpaceOther }, history }) => {
     const options = [
@@ -29,13 +29,13 @@ export const WhyMoreSpace = ({ context: { onChange, whyMoreSpace, whyMoreSpaceOt
             id: 'other',
             name: 'whyMoreSpace',
             value: 'other',
-            renderIfChecked: () => <TextInputContainer
+            renderIfChecked: () => <TextAreaInputContainer
                 value={whyMoreSpaceOther.value}
                 isValid={whyMoreSpaceOther.isValid}
                 onChange={onChange}
-                label={'Tell us the reason'}
-                customValidationMessage={'Check the reason and try again'}
+                label={'Tell us the main reason'}
                 id={'whyMoreSpaceOther'}
+                small
                 maxLength={150}
             />
         },

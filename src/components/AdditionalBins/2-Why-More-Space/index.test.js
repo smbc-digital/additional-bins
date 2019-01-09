@@ -45,7 +45,7 @@ describe('WhyMoreSpace', () => {
         const wrapper = mount(<WhyMoreSpace history={history} context={context} />)
 
         // Assert
-        expect(wrapper.find('TextInputContainer').exists()).toBe(true)
+        expect(wrapper.find('TextAreaInputContainer').exists()).toBe(true)
     })
 
     it('should render disabled button', () => {
