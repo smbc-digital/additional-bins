@@ -10,6 +10,14 @@ class Provider extends Component{
 				value: '',
 				isValid: false
 			},
+			whyMoreSpace : {
+				value: '',
+				isValid: false
+			},
+			whyMoreSpaceOther : {
+				value: '',
+				isValid: false
+			},
 			onChange: this.onChange
 		}
 	}
