@@ -1,6 +1,5 @@
 import React, { Fragment, Component} from 'react'
-import PropTypes from 'prop-types'
-import {Button, Anchor } from 'smbc-react-components'
+import {Button} from 'smbc-react-components'
 import withContext from '../../WithContext'
 import showBreadCrumbs from '../../../helpers/breadcrumbHelper'
 import showAToZFooter from  '../../../helpers/aToZFooterHelper'
