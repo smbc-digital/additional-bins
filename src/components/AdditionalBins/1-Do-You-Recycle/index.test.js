@@ -10,7 +10,6 @@ Enzyme.configure({ adapter: new Adapter() })
 describe('DoYouRecycle', () => {
 	it('should push to correct page when answer is No, Not enought space', () => {
         // Arrange
-        window.location.assign = jest.fn()
 		const history = { push: jest.fn() }
         const context = {
             doYouRecycle: {
@@ -24,7 +23,7 @@ describe('DoYouRecycle', () => {
     
         // Assert
         wrapper.find('form').simulate('submit')
-        expect(window.location.assign).toBeCalledWith('https://www.stockport.gov.uk/start/additional-recycling-bins')
+        expect(history.push).toHaveBeenCalledWith(getPageRoute(8))
     })
     
     it('should push to correct page when answer is No, What can i recycle', () => {
