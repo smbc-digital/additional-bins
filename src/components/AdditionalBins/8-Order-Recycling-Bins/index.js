@@ -35,15 +35,10 @@ export class  OrderRecyclingBins extends Component{
                 </ul>
                 <p>Use the button below to order additional recycling bins.</p>          
                 <Button className='button-primary' isValid = {true} label='Order additional recycling bins'/>
-            </form>        
-            <Anchor label='Previous' history={history} />
+            </form>
         </Fragment>
     )
     }
-}
-
-OrderRecyclingBins.propTypes = {    
-    history: PropTypes.object
 }
 
 export default withContext(OrderRecyclingBins)
