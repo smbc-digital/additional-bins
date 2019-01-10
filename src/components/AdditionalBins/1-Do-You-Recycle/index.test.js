@@ -42,7 +42,7 @@ describe('DoYouRecycle', () => {
     
         // Assert
         wrapper.find('form').simulate('submit')
-        expect(window.location.assign).toBeCalledWith('https://www.stockport.gov.uk/what-you-can-put-in-your-bins')
+        expect(history.push).toHaveBeenCalledWith(getPageRoute(7))
     })
     
     it('should push to correct page when answer is Yes', () => {
