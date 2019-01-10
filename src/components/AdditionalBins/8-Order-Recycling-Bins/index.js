@@ -1,21 +1,29 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, Component} from 'react'
 import PropTypes from 'prop-types'
-import {  Button, Anchor } from 'smbc-react-components'
+import {Button, Anchor } from 'smbc-react-components'
 import withContext from '../../WithContext'
+import showBreadCrumbs from '../../../helpers/breadcrumbHelper'
+
+export class  OrderRecyclingBins extends Component{
+    constructor(props) {
+        super(props)    
+    }
 
 
-export const OrderRecyclingBins = ({ history }) => {
+    onSubmit = (event) => {
+        event.preventDefault()
+        window.location.assign('https://www.stockport.gov.uk/start/additional-recycling-bins')
+    }
 
+    componentDidMount() {
+        showBreadCrumbs(true)
+	}
 
-const onSubmit = event => {
-    event.preventDefault()
-    window.location.assign('https://www.stockport.gov.uk/start/additional-recycling-bins')
-}
-
-
-    return(
+    render()
+    {
+        return(
         <Fragment>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={this.onSubmit}>
                 <h1>It looks like you need additional recycling bins</h1>
                 <h2>What you can do next</h2>
                 <p>You can order additional recycling bins so that you</p>
@@ -29,13 +37,11 @@ const onSubmit = event => {
             <Anchor label='Previous' history={history} />
         </Fragment>
     )
+    }
 }
 
-
-OrderRecyclingBins.propTypes = {
-    context: PropTypes.object,
-    history: PropTypes.object,
+OrderRecyclingBins.propTypes = {    
+    history: PropTypes.object
 }
-
 
 export default withContext(OrderRecyclingBins)

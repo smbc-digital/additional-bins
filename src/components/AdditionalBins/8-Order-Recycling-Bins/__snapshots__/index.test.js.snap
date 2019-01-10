@@ -29,7 +29,9 @@ Array [
       className="button-primary"
       disabled={false}
       type="submit"
-    />
+    >
+      Order additional recycling bins
+    </button>
   </form>,
   <p>
     <a
