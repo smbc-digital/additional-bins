@@ -24,9 +24,7 @@ const onSubmit = event => {
                     <li>have more space in your black bin for your non-recyclable waste</li>
                 </ul>
                 <p>Use the button below to order additional recycling bins.</p>          
-                <Button className='button-primary' isValid = {true}>
-                Order additional recycling bins
-                </Button>                             
+                <Button className='button-primary' isValid = {true} label='Order additional recycling bins'/>
             </form>        
             <Anchor label='Previous' history={history} />
         </Fragment>
