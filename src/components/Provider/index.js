@@ -22,6 +22,26 @@ class Provider extends Component{
 				value: '',
 				isValid: false
 			},
+			address : {
+				value: '',
+				isValid: false
+			},
+			firstName : {
+				value: '',
+				isValid: false
+			},
+			lastName : {
+				value: '',
+				isValid: false
+			},
+			emailAddress : {
+				value: '',
+				isValid: false
+			},
+			phoneNumber : {
+				value: '',
+				isValid: false
+			},
 			onChange: this.onChange
 		}
 	}
