@@ -21,7 +21,7 @@ export class HowToRecycleMore extends Component {
                     <p>You must recycle as much of your waste as possible.</p>
                     <h3>What you can do next</h3>
                     <p>To find out about what goes in each bin and how you can recycle as much waste as possible, visit our recycling pages using the button below.</p>
-                    <a className='button-primary' href='https://www.stockport.gov.uk/what-you-can-put-in-your-bins' id='what-can-i-put-in-my-bins'>What can I put in my bins?</a>
+                    <a className='button-primary' href='https://www.stockport.gov.uk/what-you-can-put-in-your-bins' id='what-you-can-put-in-your-bins'>What you can put in your bins</a>
             </Fragment>
         )
     }

@@ -20,9 +20,9 @@ Array [
   <a
     className="button-primary"
     href="https://www.stockport.gov.uk/what-you-can-put-in-your-bins"
-    id="what-can-i-put-in-my-bins"
+    id="what-you-can-put-in-your-bins"
   >
-    What can I put in my bins?
+    What you can put in your bins
   </a>,
 ]
 `;
