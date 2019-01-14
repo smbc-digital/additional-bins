@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import withContext from '../../WithContext'
 import showBreadCrumbs from '../../../helpers/breadcrumbHelper'
 import showAToZFooter from  '../../../helpers/aToZFooterHelper'
+import { HEADING } from '../../Config'
 
 export class Success extends Component {
 
@@ -22,7 +23,7 @@ export class Success extends Component {
         return(
             <Fragment>
                     <section className="header-container">
-                        <h1>Request an additional black bin</h1>
+                        <h1>{ HEADING }</h1>
                         <p className="h2">Thanks for your request</p>
                         <p className="h3">Case reference: {crmCaseReference} 12345_CHANGE_ME</p>
                     </section>
