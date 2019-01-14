@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import withContext from '../../WithContext'
 import { getPageRoute } from '../../../helpers/pagehelper'
 import { RadioInputsContainer, TextAreaInputContainer, Button, Anchor } from 'smbc-react-components'
+import { HEADING } from '../../Config'
 
 export const WhyMoreSpace = ({ context: { onChange, whyMoreSpace, whyMoreSpaceOther }, history }) => {
     const options = [
@@ -49,7 +50,7 @@ export const WhyMoreSpace = ({ context: { onChange, whyMoreSpace, whyMoreSpaceOt
     return (
         <Fragment>
             <form onSubmit={onSubmit}>
-                <h1>Request an additional black bin</h1>
+                <h1>{ HEADING }</h1>
                 <h2>Select the main reason you need more space in your black bin</h2>
                 <RadioInputsContainer 
                     options={options}

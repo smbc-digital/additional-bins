@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import withContext from '../../WithContext'
 import { getPageRoute } from '../../../helpers/pagehelper'
 import { RadioInputsContainer, Button } from 'smbc-react-components'
+import { HEADING } from '../../Config'
 
 export const DoYouRecycle = ({ context: { onChange, doYouRecycle }, history}) => {
 	const options = [
@@ -41,7 +42,7 @@ export const DoYouRecycle = ({ context: { onChange, doYouRecycle }, history}) =>
 	return (
 		<Fragment>
 			<form onSubmit={onSubmit}>
-			<h1>Request an additional black bin</h1>
+			<h1>{ HEADING }</h1>
 			<h2>Do you recycle as much as possible?</h2>
 				<RadioInputsContainer
 					options={options}
