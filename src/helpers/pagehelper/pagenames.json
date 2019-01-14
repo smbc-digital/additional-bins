@@ -12,6 +12,10 @@
 		"route":"/additional-black-bin/tell-us-about-yourself"
 	},
 	{
+		"number": 6,
+		"route":"/additional-black-bin/success"
+	},
+	{
 		"number": 7,
 		"route":"/additional-black-bin/how-to-recycle-more"
 	},
