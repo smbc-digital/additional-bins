@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Context } from '../../context/'
 
+
 class Provider extends Component{
 	constructor(props){
 		super(props)
@@ -18,7 +19,7 @@ class Provider extends Component{
 				value: '',
 				isValid: false
 			},
-			crmReference: '',
+			displayRecaptcha: document.getElementById('displayRecaptcha') != null ? document.getElementById('displayRecaptcha').innerHTML === 'true' ? true : false : false,
 			onChange: this.onChange
 		}
 	}

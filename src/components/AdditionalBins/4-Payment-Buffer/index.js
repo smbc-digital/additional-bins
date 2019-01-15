@@ -6,13 +6,21 @@ import SubmitUtil from '../../Utils'
 import { getPageRoute } from '../../../helpers/pagehelper'
 import withContext from '../../WithContext'
 import { PRICE, HEADING } from '../../Config'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 export class PaymentBuffer extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			isLoading: false
+            isLoading: false,
+            recaptchaValid: false
 		}
+    }
+    
+    onChangeRecaptcha = value => {
+		this.setState({
+			recaptchaValid: value ? true : false
+		})
 	}
 
     onSubmit = async (event) => {
@@ -29,15 +37,25 @@ export class PaymentBuffer extends Component {
     }
 
 render() {
-    const { isLoading } = this.state
+    const { isLoading, recaptchaValid } = this.state
+    const {displayRecaptcha } = this.props.context
     return ( 
         <form onSubmit={this.onSubmit}>
             <h1>{ HEADING }</h1>
             <p>You&#39;re now ready to pay for the bin, use the button below to go to our payments page. Continue to our payment page to fill in your card details and complete your order.</p>
             <p>The cost is { PRICE }</p>
+            {displayRecaptcha && (
+						<div className="recaptcha">
+							<ReCAPTCHA
+								sitekey="6LfAeSIUAAAAAGsx6tYHz4MIvhP0pSx9Tq7Hf8Yx"
+								onChange={this.onChangeRecaptcha}
+								name="recaptcharesult"
+							/>
+						</div>
+					)}
             <Button 
                 label='Continue to payment' 
-                isValid={true} 
+                isValid={recaptchaValid || !displayRecaptcha } 
                 isLoading={isLoading}
             />
         </form>
