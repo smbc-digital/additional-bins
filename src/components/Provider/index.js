@@ -19,7 +19,32 @@ class Provider extends Component{
 				value: '',
 				isValid: false
 			},
+			orderRecyclingBins : {
+				value: '',
+				isValid: false
+			},
+			address : {
+				value: '',
+				isValid: false
+			},
+			firstName : {
+				value: '',
+				isValid: false
+			},
+			lastName : {
+				value: '',
+				isValid: false
+			},
+			emailAddress : {
+				value: '',
+				isValid: false
+			},
+			phoneNumber : {
+				value: '',
+				isValid: false
+			},
 			displayRecaptcha: document.getElementById('displayRecaptcha') != null ? document.getElementById('displayRecaptcha').innerHTML === 'true' ? true : false : false,
+			crmReference: '',
 			onChange: this.onChange
 		}
 	}

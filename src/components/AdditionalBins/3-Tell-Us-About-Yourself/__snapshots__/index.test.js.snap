@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TellUsAboutYourself snapshot renders correctly 1`] = `
+Array [
+  <form
+    onSubmit={[Function]}
+  >
+    <h1>
+      Request an additional black bin
+    </h1>
+    <div>
+      <section
+        className="alert-warning-form"
+      >
+        <span
+          className="fa fa-exclamation-circle"
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "You must be a Stockport resident to order an additional black bin.",
+            }
+          }
+        />
+      </section>
+    </div>
+    <h2>
+      Tell us about yourself
+    </h2>
+    <label
+      className=""
+      htmlFor="firstName"
+    >
+      First name
+    </label>
+    <input
+      aria-label="First name"
+      className=""
+      id="firstName"
+      inputMode={undefined}
+      maxLength="60"
+      min={undefined}
+      name="firstName"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      pattern={undefined}
+      type="text"
+      value="b"
+    />
+    <label
+      className=""
+      htmlFor="lastName"
+    >
+      Last name
+    </label>
+    <input
+      aria-label="Last name"
+      className=""
+      id="lastName"
+      inputMode={undefined}
+      maxLength="60"
+      min={undefined}
+      name="lastName"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      pattern={undefined}
+      type="text"
+      value="c"
+    />
+    <h3
+      aria-hidden="true"
+      className="optional no-margin-bottom"
+    >
+      Phone number
+    </h3>
+    <p
+      className="optional"
+    >
+      (optional)
+    </p>
+    <label
+      className="optional sr-only"
+      htmlFor="phoneNumber"
+    >
+      Phone number
+    </label>
+    <input
+      aria-label="Phone number"
+      className=""
+      id="phoneNumber"
+      inputMode={undefined}
+      maxLength={undefined}
+      min={undefined}
+      name="phoneNumber"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      pattern={undefined}
+      type="tel"
+      value="e"
+    />
+    <label
+      className=""
+      htmlFor="emailAddress"
+    >
+      Email address
+    </label>
+    <input
+      aria-label="Email address"
+      className=""
+      id="emailAddress"
+      inputMode={undefined}
+      maxLength={undefined}
+      min={undefined}
+      name="emailAddress"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      pattern={undefined}
+      type="email"
+      value="d"
+    />
+    <label
+      className=""
+      htmlFor="addressLine1"
+    >
+      Address line 1
+    </label>
+    <input
+      aria-label="Address line 1"
+      className=""
+      id="addressLine1"
+      inputMode={undefined}
+      maxLength={undefined}
+      min={undefined}
+      name="addressLine1"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      pattern={undefined}
+      type="text"
+      value=""
+    />
+    <h3
+      aria-hidden="true"
+      className="optional no-margin-bottom"
+    >
+      Address line 2
+    </h3>
+    <p
+      className="optional"
+    >
+      (optional)
+    </p>
+    <label
+      className="optional sr-only"
+      htmlFor="addressLine2"
+    >
+      Address line 2
+    </label>
+    <input
+      aria-label="Address line 2"
+      className=""
+      id="addressLine2"
+      inputMode={undefined}
+      maxLength={undefined}
+      min={undefined}
+      name="addressLine2"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      pattern={undefined}
+      type="text"
+      value=""
+    />
+    <label
+      className=""
+      htmlFor="town"
+    >
+      Town
+    </label>
+    <input
+      aria-label="Town"
+      className=""
+      id="town"
+      inputMode={undefined}
+      maxLength={undefined}
+      min={undefined}
+      name="town"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      pattern={undefined}
+      type="text"
+      value=""
+    />
+    <label
+      className=""
+      htmlFor="postcode"
+    >
+      Postcode
+    </label>
+    <input
+      aria-label="Postcode"
+      className=""
+      id="postcode"
+      inputMode={undefined}
+      maxLength={undefined}
+      min={undefined}
+      name="postcode"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      pattern={undefined}
+      type="text"
+      value=""
+    />
+    <p>
+      <a
+        href="#"
+        onClick={[Function]}
+      >
+         Use address finder 
+      </a>
+    </p>
+    <button
+      className="button-primary"
+      disabled={true}
+      type="submit"
+    >
+      Next step
+    </button>
+  </form>,
+  <p>
+    <a
+      href="#"
+      onClick={[Function]}
+    >
+      Previous
+    </a>
+  </p>,
+]
+`;
