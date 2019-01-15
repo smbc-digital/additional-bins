@@ -39,6 +39,8 @@ export const TellUsAboutYourself = ({ context: { onChange, address, firstName, l
                         enableHeading={false}
                         onChange={onChange}
                         useVerintLookup={true}
+                        shouldDisplayManualSearch={false}
+                        showManualOption={false}
                 />
                 <Button isValid={ address.isValid && firstName.isValid && lastName.isValid && emailAddress.isValid } label='Next step' />
             </form>
