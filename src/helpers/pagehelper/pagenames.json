@@ -12,11 +12,23 @@
 		"route":"/additional-black-bin/tell-us-about-yourself"
 	},
 	{
+		"number": 4,
+		"route":"/additional-black-bin/payment"
+	},
+	{
+		"number": 6,
+		"route":"/additional-black-bin/success"
+	},
+	{
 		"number": 7,
 		"route":"/additional-black-bin/how-to-recycle-more"
 	},
 	{
 		"number": 8,
 		"route":"/additional-black-bin/order-recycling-bins"
+	},
+	{
+		"number": 11,
+		"route":"/additional-black-bin/something-went-wrong"
 	}
 ]

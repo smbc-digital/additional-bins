@@ -18,6 +18,7 @@ class Provider extends Component{
 				value: '',
 				isValid: false
 			},
+			crmReference: '',
 			orderRecyclingBins : {
 				value: '',
 				isValid: false

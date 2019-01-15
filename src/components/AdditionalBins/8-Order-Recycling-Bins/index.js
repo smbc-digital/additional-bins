@@ -1,5 +1,7 @@
 import React, { Fragment, Component} from 'react'
 import {Button} from 'smbc-react-components'
+import ReactGA from 'react-ga'
+import { getPageRoute } from '../../../helpers/pagehelper'
 import withContext from '../../WithContext'
 import showBreadCrumbs from '../../../helpers/breadcrumbHelper'
 import showAToZFooter from  '../../../helpers/aToZFooterHelper'
@@ -7,6 +9,7 @@ import showAToZFooter from  '../../../helpers/aToZFooterHelper'
 export class  OrderRecyclingBins extends Component{
     constructor(props) {
         super(props)    
+        ReactGA.pageview(getPageRoute(8))
     }
 
 
