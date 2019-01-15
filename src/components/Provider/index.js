@@ -18,7 +18,6 @@ class Provider extends Component{
 				value: '',
 				isValid: false
 			},
-			crmReference: '',
 			orderRecyclingBins : {
 				value: '',
 				isValid: false
@@ -43,6 +42,7 @@ class Provider extends Component{
 				value: '',
 				isValid: false
 			},
+			crmReference: '',
 			onChange: this.onChange
 		}
 	}
