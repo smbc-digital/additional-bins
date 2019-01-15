@@ -3,7 +3,7 @@ import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { getPageRoute } from '../../../helpers/pagehelper'
 import * as submitForm from '../../Utils'
-import PaymentBuffer from './index'
+import { PaymentBuffer } from './index'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -45,6 +45,57 @@ describe('PaymentBuffer', () => {
 
         // Assert
         expect(history.push).toHaveBeenCalledWith(getPageRoute(11))
+    })
+
+    it('should not call push on submit when recaptcha is invalid', () => {
+        // Arrange
+        document.body.innerHTML = '<span id="displayRecaptcha" class="hidden">true</span>'
+        const data = {
+            displayRecaptcha: true,
+		}
+
+        let history = { push: jest.fn() }
+        let wrapper = mount(<PaymentBuffer context={data} history={history} />)
+
+        // Act
+        wrapper.find('button').simulate('click')
+
+        // Assert
+        expect(history.push).not.toBeCalled()
+    })
+
+    it('should set recaptchaValid in state to false', () => {
+        // Arrange
+        document.body.innerHTML = '<span id="displayRecaptcha" class="hidden">true</span>'
+        const data = {
+            displayRecaptcha: true,
+		}
+
+        let history = { push: jest.fn() }
+        let wrapper = mount(<PaymentBuffer context={data} history={history} />)
+
+        // Act
+        wrapper.instance().onChangeRecaptcha(undefined)
+
+        // Assert
+        expect(wrapper.state().recaptchaValid).toBe(false)
+    })
+
+    it('should set recaptchaValid in state to true', () => {
+        // Arrange
+        document.body.innerHTML = '<span id="displayRecaptcha" class="hidden">true</span>'
+        const data = {
+            displayRecaptcha: true,
+		}
+
+        let history = { push: jest.fn() }
+        let wrapper = mount(<PaymentBuffer context={data} history={history} />)
+
+        // Act
+        wrapper.instance().onChangeRecaptcha('testRecaptchaValue')
+
+        // Assert
+        expect(wrapper.state().recaptchaValid).toBe(true)
     })
 
 })
