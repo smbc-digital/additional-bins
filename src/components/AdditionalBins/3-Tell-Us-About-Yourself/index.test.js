@@ -153,37 +153,6 @@ it('should submit the form and go to page 4 when user does not select other on t
         expect(wrapper.find('#addressLine1').exists()).toBeFalsy()
     })
 
-    it('should enable next step button when all inputs are valid',() => { 
-        // Arrange
-		const context = {
-            address : {
-                value: 'a',
-                isValid: false
-            },
-            firstName : {
-                value: 'b',
-                isValid: false
-            },
-            lastName : {
-                value: 'c',
-                isValid: false
-            },
-            emailAddress : {
-                value: 'd',
-                isValid: false
-            },
-            phoneNumber : {
-                value: 'e',
-                isValid: false
-            }
-        }
-        // Act
-        const wrapper = mount(<TellUsAboutYourself context={context}/>)
-
-        // Assert
-    
-    })
-
     describe('snapshot', () => {
     it('renders correctly', () => {
         const context = {
