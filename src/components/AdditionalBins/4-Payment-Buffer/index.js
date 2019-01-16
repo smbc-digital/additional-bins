@@ -39,11 +39,13 @@ export class PaymentBuffer extends Component {
 render() {
     const { isLoading, recaptchaValid } = this.state
     const {displayRecaptcha } = this.props.context
+
     return ( 
         <form onSubmit={this.onSubmit}>
             <h1>{ HEADING }</h1>
-            <p>You&#39;re now ready to pay for the bin, use the button below to go to our payments page. Continue to our payment page to fill in your card details and complete your order.</p>
-            <p>The cost is { PRICE }</p>
+            <p>You&#39;re now ready to pay for the bin, use the button below to go to our payments page.</p>
+            <p>Continue to our payment page to fill in your card details and complete your order.</p>
+            <p>The cost is { PRICE }.</p>
             {displayRecaptcha && (
 						<div className="recaptcha">
 							<ReCAPTCHA
