@@ -54,6 +54,7 @@ render() {
 						</div>
 					)}
             <Button 
+                id='continue-to-payment'
                 label='Continue to payment' 
                 isValid={recaptchaValid || !displayRecaptcha } 
                 isLoading={isLoading}
