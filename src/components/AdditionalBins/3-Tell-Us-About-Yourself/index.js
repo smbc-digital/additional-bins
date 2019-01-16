@@ -10,7 +10,7 @@ export const TellUsAboutYourself = ({ context: { onChange, address, firstName, l
         event.preventDefault()
         if(whyMoreSpace.value !== 'other')
         {
-            history.push(getPageRoute(4)) //TODO: change routes to correct pages & make addresspicker auto only
+            history.push(getPageRoute(4))
         }
         else {
             history.push(getPageRoute(6))
