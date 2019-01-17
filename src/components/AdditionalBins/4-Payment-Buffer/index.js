@@ -54,12 +54,9 @@ render() {
 							/>
 						</div>
 					)}
-<<<<<<< HEAD
-            <Button id='continue-to-payment'
-=======
+            
             <Button 
                 id='continue-to-payment'
->>>>>>> 83d3210d9fbea7544b33b3290a35275f3cfb5600
                 label='Continue to payment' 
                 isValid={recaptchaValid || !displayRecaptcha } 
                 isLoading={isLoading}

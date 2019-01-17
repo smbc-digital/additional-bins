@@ -66,10 +66,10 @@ Array [
       className="optional sr-only"
       htmlFor="phoneNumber"
     >
-      Phone number
+      Phone number optional
     </label>
     <input
-      aria-label="Phone number"
+      aria-label=""
       className=""
       id="phoneNumber"
       inputMode={undefined}
