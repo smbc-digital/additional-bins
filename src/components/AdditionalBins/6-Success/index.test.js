@@ -22,6 +22,38 @@ it('should find elements required',() => {
     expect(wrapper.find('h1','h2','p','a').exists()).toBe(true)
 })
 
+it('should show triage success page when theres no receipt number',() => { 
+    // Arrange
+    const context = {
+        success: {
+            value: '',
+        },
+        receiptNumber: ''
+    }
+    const wrapper = mount(<Success context={context} />)
+
+    // Act
+
+    // Assert
+    expect(wrapper.find('h3').text()).toEqual('Waste diary')
+})
+
+it('should show non triage success page when theres a receipt number',() => { 
+    // Arrange
+    const context = {
+        success: {
+            value: '',
+        },
+        receiptNumber: '1'
+    }
+    const wrapper = mount(<Success context={context} />)
+
+    // Act
+
+    // Assert
+    expect(wrapper.find('h3').exists()).toBe(false)
+})
+
 //     describe('snapshot', () => {
 //     it('renders correctly', () => {
 //         const context = {
