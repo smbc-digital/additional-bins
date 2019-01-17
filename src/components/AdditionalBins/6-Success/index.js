@@ -42,9 +42,7 @@ export class Success extends Component {
                     <h3>Waste diary</h3>
                     <p>To help us understand why you need an additional black bin, you must download and fill in a waste diary every day for a week.</p>
                     <p>The email confirmation will tell you how to return your waste diary to us once you have completed it.</p>
-                    <a className='button-primary' href='https://s3-eu-west-1.amazonaws.com/live-iag-static-assets/pdf/BinCalendars/Waste+diary+v2.pdf'>Download a waste diary</a>
-                    </Fragment>
-                }
+                    <a className='button-primary' href='https://s3-eu-west-1.amazonaws.com/live-iag-static-assets/pdf/BinCalendars/Waste+diary+v2.pdf'>Download a waste diary (PDF 65.5Kb)</a>
             </Fragment>
         )
     }

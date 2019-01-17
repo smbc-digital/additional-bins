@@ -19,10 +19,6 @@ class Provider extends Component{
 				value: '',
 				isValid: false
 			},
-			orderRecyclingBins : {
-				value: '',
-				isValid: false
-			},
 			address : {
 				value: '',
 				isValid: false

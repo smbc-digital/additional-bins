@@ -8,22 +8,6 @@ Array [
     <h1>
       Request an additional black bin
     </h1>
-    <div>
-      <section
-        className="alert-warning-form"
-      >
-        <span
-          className="fa fa-exclamation-circle"
-        />
-        <p
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "You must be a Stockport resident to order an additional black bin.",
-            }
-          }
-        />
-      </section>
-    </div>
     <h2>
       Tell us about yourself
     </h2>
@@ -69,7 +53,7 @@ Array [
     />
     <h3
       aria-hidden="true"
-      className="optional no-margin-bottom"
+      className="optional"
     >
       Phone number
     </h3>
@@ -82,10 +66,10 @@ Array [
       className="optional sr-only"
       htmlFor="phoneNumber"
     >
-      Phone number
+      Phone number optional
     </label>
     <input
-      aria-label="Phone number"
+      aria-label=""
       className=""
       id="phoneNumber"
       inputMode={undefined}

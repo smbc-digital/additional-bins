@@ -2,18 +2,24 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import withContext from '../../WithContext'
 import { getPageRoute } from '../../../helpers/pagehelper'
-import { AlertForm, TextInputContainer, Button, Anchor, AddressPicker } from 'smbc-react-components'
+import SubmitUtil from '../../Utils'
+import { TextInputContainer, Button, Anchor, AddressPicker } from 'smbc-react-components'
 
-export const TellUsAboutYourself = ({ context: { onChange, address, firstName, lastName, emailAddress, phoneNumber, whyMoreSpace }, history }) => {
+export const TellUsAboutYourself = ({ context, history }) => {
     
-    const onSubmit = event => {
+    const onSubmit = async (event) => {
         event.preventDefault()
-        if(whyMoreSpace.value !== 'other')
+        if(context.whyMoreSpace.value !== 'other')
         {
-            history.push(getPageRoute(4)) //TODO: change routes to correct pages & make addresspicker auto only
+            history.push(getPageRoute(4))
         }
         else {
-            history.push(getPageRoute(6))
+            let rawResponse = await SubmitUtil(context)
+            if(rawResponse.status === 200){
+                history.push(getPageRoute(6))
+            } else {
+                history.push(getPageRoute(11))
+            }
         }
     }
     
@@ -21,28 +27,24 @@ export const TellUsAboutYourself = ({ context: { onChange, address, firstName, l
         <Fragment>
             <form onSubmit={onSubmit}>
                 <h1>Request an additional black bin</h1>
-                <AlertForm
-                level='warning'
-                content='You must be a Stockport resident to order an additional black bin.'
-                />
                 <h2>Tell us about yourself</h2>
-                <TextInputContainer onChange={onChange} value={firstName.value} optional={false} maxLength='60' id='firstName' type='text' label='First name' />
-                <TextInputContainer onChange={onChange} value={lastName.value} optional={false} maxLength='60' id='lastName' type='text' label='Last name' />
-                <TextInputContainer onChange={onChange} value={phoneNumber.value} optional={true} id='phoneNumber' type='tel' label='Phone number' />
-                <TextInputContainer onChange={onChange} value={emailAddress.value} optional={false} id='emailAddress' type='email' label='Email address' />
+                <TextInputContainer onChange={context.onChange} value={context.firstName.value} optional={false} maxLength='60' id='firstName' type='text' label='First name' />
+                <TextInputContainer onChange={context.onChange} value={context.lastName.value} optional={false} maxLength='60' id='lastName' type='text' label='Last name' />
+                <TextInputContainer onChange={context.onChange} value={context.phoneNumber.value} optional={true} id='phoneNumber' type='tel' label='Phone number' />
+                <TextInputContainer onChange={context.onChange} value={context.emailAddress.value} optional={false} id='emailAddress' type='email' label='Email address' />
                 <AddressPicker
                         name={'address'}
-                        address={address.value}
+                        address={context.address.value}
                         automaticLabel={'Enter the postcode'}
                         automaticTextLabel={'Select the address below'}
                         useStockportPostcode={true}
                         enableHeading={false}
-                        onChange={onChange}
+                        onChange={context.onChange}
                         useVerintLookup={true}
                         shouldDisplayManualSearch={false}
                         showManualOption={false}
                 />
-                <Button isValid={ address.isValid && firstName.isValid && lastName.isValid && emailAddress.isValid } label='Next step' />
+                <Button isValid={ context.address.isValid && context.firstName.isValid && context.lastName.isValid && context.emailAddress.isValid } label='Next step' />
             </form>
             <Anchor label='Previous' history={history} />
         </Fragment>
