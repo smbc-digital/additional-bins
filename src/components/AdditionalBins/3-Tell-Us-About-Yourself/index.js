@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import withContext from '../../WithContext'
 import { getPageRoute } from '../../../helpers/pagehelper'
-import { AlertForm, TextInputContainer, Button, Anchor, AddressPicker } from 'smbc-react-components'
+import { TextInputContainer, Button, Anchor, AddressPicker } from 'smbc-react-components'
 
 export const TellUsAboutYourself = ({ context: { onChange, address, firstName, lastName, emailAddress, phoneNumber, whyMoreSpace }, history }) => {
     
@@ -10,7 +10,7 @@ export const TellUsAboutYourself = ({ context: { onChange, address, firstName, l
         event.preventDefault()
         if(whyMoreSpace.value !== 'other')
         {
-            history.push(getPageRoute(4)) //TODO: change routes to correct pages & make addresspicker auto only
+            history.push(getPageRoute(4))
         }
         else {
             history.push(getPageRoute(6))
@@ -21,10 +21,6 @@ export const TellUsAboutYourself = ({ context: { onChange, address, firstName, l
         <Fragment>
             <form onSubmit={onSubmit}>
                 <h1>Request an additional black bin</h1>
-                <AlertForm
-                level='warning'
-                content='You must be a Stockport resident to order an additional black bin.'
-                />
                 <h2>Tell us about yourself</h2>
                 <TextInputContainer onChange={onChange} value={firstName.value} optional={false} maxLength='60' id='firstName' type='text' label='First name' />
                 <TextInputContainer onChange={onChange} value={lastName.value} optional={false} maxLength='60' id='lastName' type='text' label='Last name' />

@@ -181,7 +181,7 @@ it('should submit the form and go to page 4 when user does not select other on t
         const wrapper = mount(<TellUsAboutYourself context={context}/>)
 
         // Assert
-        expect(wrapper.find('button').props().disabled).toBeFalsy()
+        expect(wrapper.find('button').at(1).props().disabled).toBeFalsy()
     })
 
     describe('snapshot', () => {

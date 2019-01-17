@@ -8,22 +8,6 @@ Array [
     <h1>
       Request an additional black bin
     </h1>
-    <div>
-      <section
-        className="alert-warning-form"
-      >
-        <span
-          className="fa fa-exclamation-circle"
-        />
-        <p
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "You must be a Stockport resident to order an additional black bin.",
-            }
-          }
-        />
-      </section>
-    </div>
     <h2>
       Tell us about yourself
     </h2>
@@ -69,7 +53,7 @@ Array [
     />
     <h3
       aria-hidden="true"
-      className="optional no-margin-bottom"
+      className="optional"
     >
       Phone number
     </h3>
@@ -120,83 +104,12 @@ Array [
     />
     <label
       className=""
-      htmlFor="addressLine1"
-    >
-      Address line 1
-    </label>
-    <input
-      aria-label="Address line 1"
-      className=""
-      id="addressLine1"
-      inputMode={undefined}
-      maxLength={undefined}
-      min={undefined}
-      name="addressLine1"
-      onChange={[Function]}
-      onKeyDown={[Function]}
-      pattern={undefined}
-      type="text"
-      value=""
-    />
-    <h3
-      aria-hidden="true"
-      className="optional no-margin-bottom"
-    >
-      Address line 2
-    </h3>
-    <p
-      className="optional"
-    >
-      (optional)
-    </p>
-    <label
-      className="optional sr-only"
-      htmlFor="addressLine2"
-    >
-      Address line 2
-    </label>
-    <input
-      aria-label="Address line 2"
-      className=""
-      id="addressLine2"
-      inputMode={undefined}
-      maxLength={undefined}
-      min={undefined}
-      name="addressLine2"
-      onChange={[Function]}
-      onKeyDown={[Function]}
-      pattern={undefined}
-      type="text"
-      value=""
-    />
-    <label
-      className=""
-      htmlFor="town"
-    >
-      Town
-    </label>
-    <input
-      aria-label="Town"
-      className=""
-      id="town"
-      inputMode={undefined}
-      maxLength={undefined}
-      min={undefined}
-      name="town"
-      onChange={[Function]}
-      onKeyDown={[Function]}
-      pattern={undefined}
-      type="text"
-      value=""
-    />
-    <label
-      className=""
       htmlFor="postcode"
     >
-      Postcode
+      Enter the postcode
     </label>
     <input
-      aria-label="Postcode"
+      aria-label="Enter the postcode"
       className=""
       id="postcode"
       inputMode={undefined}
@@ -209,17 +122,17 @@ Array [
       type="text"
       value=""
     />
-    <p>
-      <a
-        href="#"
-        onClick={[Function]}
-      >
-         Use address finder 
-      </a>
-    </p>
+    <button
+      className="button-secondary"
+      disabled={true}
+      onClick={[Function]}
+    >
+      Find the address
+    </button>
     <button
       className="button-primary"
       disabled={true}
+      id={undefined}
       type="submit"
     >
       Next step

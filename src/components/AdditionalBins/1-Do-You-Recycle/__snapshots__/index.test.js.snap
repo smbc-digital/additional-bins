@@ -69,6 +69,7 @@ exports[`DoYouRecycle snapshot renders correctly 1`] = `
   <button
     className="button-primary"
     disabled={true}
+    id={undefined}
     type="submit"
   >
     Next step

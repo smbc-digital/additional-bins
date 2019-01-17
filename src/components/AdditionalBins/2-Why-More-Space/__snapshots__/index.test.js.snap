@@ -88,6 +88,7 @@ Array [
     <button
       className="button-primary"
       disabled={true}
+      id={undefined}
       type="submit"
     >
       Next step

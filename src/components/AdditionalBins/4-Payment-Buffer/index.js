@@ -42,8 +42,9 @@ render() {
     return ( 
         <form onSubmit={this.onSubmit}>
             <h1>{ HEADING }</h1>
-            <p>You&#39;re now ready to pay for the bin, use the button below to go to our payments page. Continue to our payment page to fill in your card details and complete your order.</p>
-            <p>The cost is { PRICE }</p>
+            <p>You&#39;re now ready to pay for the bin, use the button below to go to our payments page.</p>
+            <p>Continue to our payment page to fill in your card details and complete your order.</p>
+            <p>The cost is { PRICE }.</p>
             {displayRecaptcha && (
 						<div className="recaptcha">
 							<ReCAPTCHA
@@ -53,7 +54,12 @@ render() {
 							/>
 						</div>
 					)}
+<<<<<<< HEAD
             <Button id='continue-to-payment'
+=======
+            <Button 
+                id='continue-to-payment'
+>>>>>>> 83d3210d9fbea7544b33b3290a35275f3cfb5600
                 label='Continue to payment' 
                 isValid={recaptchaValid || !displayRecaptcha } 
                 isLoading={isLoading}

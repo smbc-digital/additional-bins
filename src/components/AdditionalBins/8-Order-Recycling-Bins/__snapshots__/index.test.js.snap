@@ -27,6 +27,7 @@ exports[`OrderRecyclingBins snapshot renders correctly 1`] = `
   <button
     className="button-primary"
     disabled={false}
+    id={undefined}
     type="submit"
   >
     Order additional recycling bins
