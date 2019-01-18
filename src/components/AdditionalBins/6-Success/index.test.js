@@ -35,7 +35,7 @@ it('should show triage success page when theres no receipt number',() => {
     // Act
 
     // Assert
-    expect(wrapper.find('h3').text()).toEqual('Waste diary')
+    expect(wrapper.find('a').text()).toEqual('Download a waste diary (PDF 65.5Kb)')
 })
 
 it('should show non triage success page when theres a receipt number',() => { 
