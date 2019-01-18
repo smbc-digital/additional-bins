@@ -40,7 +40,9 @@ class Provider extends Component{
 				isValid: false
 			},
 			displayRecaptcha: document.getElementById('displayRecaptcha') != null ? document.getElementById('displayRecaptcha').innerHTML === 'true' ? true : false : false,
-			crmCaseReference: '',
+			crmReference: '',
+			receiptNumber: '123',
+			binDeliveryDate: '',
 			onChange: this.onChange,
 			onFormSubmission: this.onFormSubmission
 		}
