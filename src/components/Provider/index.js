@@ -41,7 +41,7 @@ class Provider extends Component{
 			},
 			displayRecaptcha: document.getElementById('displayRecaptcha') != null ? document.getElementById('displayRecaptcha').innerHTML === 'true' ? true : false : false,
 			crmReference: '',
-			receiptNumber: '',
+			receiptNumber: '123',
 			binDeliveryDate: '',
 			onChange: this.onChange
 		}
