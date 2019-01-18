@@ -25,10 +25,15 @@ async function submitForm(context) {
             timeout.set(10000, 'Timeout!')
         ])
 
-        const paymentUrl = await result.text()
+        const responseObject = await result.text()
+        const jsonResponse = JSON.parse(responseObject)
+        const paymentUrl = jsonResponse.url
+        const caseId = jsonResponse.caseID
+
         return {
             status: result.status,
-            url: paymentUrl
+            url: paymentUrl,
+            caseId: caseId
         }
     }
     catch (error) {

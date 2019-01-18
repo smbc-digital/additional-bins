@@ -16,6 +16,7 @@ export const TellUsAboutYourself = ({ context, history }) => {
         else {
             let rawResponse = await SubmitUtil(context)
             if(rawResponse.status === 200){
+                context.onFormSubmission(rawResponse.caseId)
                 history.push(getPageRoute(6))
             } else {
                 history.push(getPageRoute(11))

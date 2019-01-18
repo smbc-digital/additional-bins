@@ -40,8 +40,9 @@ class Provider extends Component{
 				isValid: false
 			},
 			displayRecaptcha: document.getElementById('displayRecaptcha') != null ? document.getElementById('displayRecaptcha').innerHTML === 'true' ? true : false : false,
-			crmReference: '',
-			onChange: this.onChange
+			crmCaseReference: '',
+			onChange: this.onChange,
+			onFormSubmission: this.onFormSubmission
 		}
 	}
 	
@@ -52,7 +53,14 @@ class Provider extends Component{
 				isValid
 			}
 		})
-    }
+	}
+	
+	onFormSubmission = (crmReference) => {
+		const copyOfState = Object.assign({}, this.state)
+		copyOfState.crmCaseReference = crmReference
+
+		this.setState(copyOfState)
+	}
     
 	render(){
 		const { children } = this.props

@@ -25,7 +25,7 @@ export class Success extends Component {
                     <section className="header-container">
                         <h1>{ HEADING }</h1>
                         <p className="h2">Thanks for your request</p>
-                        <p className="h3">Case reference: {crmCaseReference} 12345_CHANGE_ME</p>
+                        <p className="h3">Case reference: { crmCaseReference }</p>
                     </section>
                     <h2>What happens next</h2>
                     <p>You’ll receive a confirmation email of your request for an additional black bin.</p>

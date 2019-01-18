@@ -77,18 +77,18 @@ it('should submit the form and go to page 4 when user does not select other on t
             whyMoreSpace : {
                 value: 'other',
                 isValid: true
-            }
+            },
+            onFormSubmission: jest.fn()
         }
-        submitForm.default = jest.fn().mockReturnValue({ status: 200 })
+        submitForm.default = jest.fn().mockReturnValue({ status: 200, caseId: '12345678' })
     
         const wrapper = mount(<TellUsAboutYourself context={context} history={history} />)
     
-    
         // Act
-      await wrapper.find('form').simulate('submit')
-    
+        await wrapper.find('form').simulate('submit')
     
         // Assert
+        expect(context.onFormSubmission).toBeCalledWith('12345678')
         expect(history.push).toHaveBeenCalledWith(getPageRoute(6))
         })
 
