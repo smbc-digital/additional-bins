@@ -31,8 +31,8 @@ export const TellUsAboutYourself = ({ context, history }) => {
                 <h2>Tell us about yourself</h2>
                 <TextInputContainer onChange={context.onChange} value={context.firstName.value} optional={false} maxLength='60' id='firstName' type='text' label='First name' />
                 <TextInputContainer onChange={context.onChange} value={context.lastName.value} optional={false} maxLength='60' id='lastName' type='text' label='Last name' />
-                <TextInputContainer onChange={context.onChange} value={context.phoneNumber.value} optional={true} id='phoneNumber' type='tel' label='Phone number' />
-                <TextInputContainer onChange={context.onChange} value={context.emailAddress.value} optional={false} id='emailAddress' type='email' label='Email address' />
+                <TextInputContainer onChange={context.onChange} value={context.phoneNumber.value} optional={true} maxLength='60' id='phoneNumber' type='tel' label='Phone number' />
+                <TextInputContainer onChange={context.onChange} value={context.emailAddress.value} optional={false}  maxLength='60' id='emailAddress' type='email' label='Email address' />
                 <AddressPicker
                         name={'address'}
                         address={context.address.value}

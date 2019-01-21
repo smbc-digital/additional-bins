@@ -73,7 +73,7 @@ Array [
       className=""
       id="phoneNumber"
       inputMode={undefined}
-      maxLength={undefined}
+      maxLength="60"
       min={undefined}
       name="phoneNumber"
       onChange={[Function]}
@@ -93,7 +93,7 @@ Array [
       className=""
       id="emailAddress"
       inputMode={undefined}
-      maxLength={undefined}
+      maxLength="60"
       min={undefined}
       name="emailAddress"
       onChange={[Function]}
