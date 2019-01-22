@@ -22,7 +22,7 @@ Array [
       className=""
       id="firstName"
       inputMode={undefined}
-      maxLength="60"
+      maxLength="35"
       min={undefined}
       name="firstName"
       onChange={[Function]}
