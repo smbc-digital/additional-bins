@@ -21,7 +21,6 @@ class App extends Component {
                 <Route exact path={getPageRoute(6)} component={ Success } />
                 <Route exact path={getPageRoute(7)} component={ HowToRecycleMore} />
                 <Route exact path={getPageRoute(8)} component={ OrderRecyclingBins } />
-                <Route exact path={getPageRoute(11)} component={ ErrorPage } />
                 <Route exact path="/error" component={ ErrorPage } />
             </Switch>
         )

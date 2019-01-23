@@ -2,7 +2,7 @@
 
 exports[`OrderRecyclingBins snapshot renders correctly 1`] = `
 <form
-  onSubmit={[Function]}
+  onSubmit={undefined}
 >
   <h1>
     It looks like you need additional recycling bins
@@ -24,13 +24,11 @@ exports[`OrderRecyclingBins snapshot renders correctly 1`] = `
   <p>
     Use the button below to order additional recycling bins.
   </p>
-  <button
+  <a
     className="button-primary"
-    disabled={false}
-    id={undefined}
-    type="submit"
+    href="https://www.stockport.gov.uk/start/additional-recycling-bins"
   >
     Order additional recycling bins
-  </button>
+  </a>
 </form>
 `;
