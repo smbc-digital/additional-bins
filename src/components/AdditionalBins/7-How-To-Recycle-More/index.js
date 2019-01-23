@@ -2,8 +2,10 @@ import React, { Fragment, Component } from 'react'
 import ReactGA from 'react-ga'
 import { getPageRoute } from '../../../helpers/pagehelper'
 import withContext from '../../WithContext'
+import { WHATYOUCANPUTINYOURBINS } from '../../Config'
 import showBreadCrumbs from '../../../helpers/breadcrumbHelper'
 import showAToZFooter from '../../../helpers/aToZFooterHelper'
+
 
 export class HowToRecycleMore extends Component {
     constructor(props){
@@ -24,7 +26,7 @@ export class HowToRecycleMore extends Component {
                     <p>You must recycle as much of your waste as possible.</p>
                     <h3>What you can do next</h3>
                     <p>To find out about what goes in each bin and how you can recycle as much waste as possible, visit our recycling pages using the button below.</p>
-                    <a className='button-primary' href='https://www.stockport.gov.uk/what-you-can-put-in-your-bins' id='what-you-can-put-in-your-bins'>What you can put in your bins</a>
+                    <a className='button-primary' href={WHATYOUCANPUTINYOURBINS} id='what-you-can-put-in-your-bins'>What you can put in your bins</a>
             </Fragment>
         )
     }

@@ -2,6 +2,7 @@ import React, { Fragment, Component} from 'react'
 import ReactGA from 'react-ga'
 import { getPageRoute } from '../../../helpers/pagehelper'
 import withContext from '../../WithContext'
+import { ORDERRECYCLINGBINS } from '../../Config'
 import showBreadCrumbs from '../../../helpers/breadcrumbHelper'
 import showAToZFooter from  '../../../helpers/aToZFooterHelper'
 
@@ -9,6 +10,11 @@ export class  OrderRecyclingBins extends Component{
     constructor(props) {
         super(props)    
         ReactGA.pageview(getPageRoute(8))
+    }
+
+    onSubmit = (event) => {
+        event.preventDefault()
+        window.location.assign(ORDERRECYCLINGBINS)
     }
 
     componentDidMount() {

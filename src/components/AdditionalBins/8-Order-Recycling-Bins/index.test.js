@@ -3,6 +3,7 @@ import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import ReactGA from 'react-ga'
 import { OrderRecyclingBins } from './index'
+import { ORDERRECYCLINGBINS } from '../../Config'
 import renderer from 'react-test-renderer'
 
 
@@ -22,6 +23,29 @@ describe('OrderRecyclingBins',() => {
 
         expect(ReactGA.testModeAPI.calls).toHaveLength(1)
     })
+<<<<<<< HEAD
+=======
+
+    it('should push to correct page', () => {
+        // Arrange
+        window.location.assign = jest.fn()
+		const history = { push: jest.fn() }
+        const context = {
+            doYouRecycle: {
+                value: 'test',
+                isValid : true
+            }
+        }
+
+		// Act
+        const wrapper = mount(<OrderRecyclingBins history={history} context={context} />)
+    
+        // Assert
+        wrapper.find('form').simulate('submit')
+        expect(window.location.assign).toBeCalledWith(ORDERRECYCLINGBINS)
+    })
+
+>>>>>>> JonC Add Bins
     
     describe('snapshot', () => {
         it('renders correctly', () => {
