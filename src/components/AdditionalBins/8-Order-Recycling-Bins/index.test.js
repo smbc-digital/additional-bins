@@ -23,8 +23,6 @@ describe('OrderRecyclingBins',() => {
 
         expect(ReactGA.testModeAPI.calls).toHaveLength(1)
     })
-<<<<<<< HEAD
-=======
 
     it('should push to correct page', () => {
         // Arrange
@@ -45,8 +43,6 @@ describe('OrderRecyclingBins',() => {
         expect(window.location.assign).toBeCalledWith(ORDERRECYCLINGBINS)
     })
 
->>>>>>> JonC Add Bins
-    
     describe('snapshot', () => {
         it('renders correctly', () => {
             const context = {}
