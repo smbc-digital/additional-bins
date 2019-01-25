@@ -11,7 +11,7 @@ export const WhyMoreSpace = ({ context: { onChange, whyMoreSpace, whyMoreSpaceOt
             label: 'Disposable nappies',
             id: 'disposable-nappies',
             name: 'whyMoreSpace',
-            value: 'disposable-nappies'
+            value: 'NAP'
         },
         {
             label: 'Medical or healthcare waste',

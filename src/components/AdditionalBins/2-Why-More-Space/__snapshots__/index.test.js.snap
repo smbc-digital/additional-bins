@@ -22,7 +22,7 @@ Array [
           name="whyMoreSpace"
           onChange={[Function]}
           type="radio"
-          value="disposable-nappies"
+          value="NAP"
         />
         <label
           htmlFor="disposable-nappies"
