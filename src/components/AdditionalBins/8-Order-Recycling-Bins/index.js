@@ -4,6 +4,7 @@ import { getPageRoute } from '../../../helpers/pagehelper'
 import withContext from '../../WithContext'
 import { OrderRecyclingBinsLink } from '../../Config'
 import showBreadCrumbs from '../../../helpers/breadcrumbHelper'
+import  appendBreadCrumb from '../../../helpers/breadCrumbAppendHelper'
 import showAToZFooter from  '../../../helpers/aToZFooterHelper'
 
 export class  OrderRecyclingBins extends Component{
@@ -14,6 +15,7 @@ export class  OrderRecyclingBins extends Component{
 
     componentDidMount() {
         showBreadCrumbs(true)
+        appendBreadCrumb('Request a new bin', 'https://www.stockport.gov.uk/topic/request-a-new-bin')
         showAToZFooter(true)
 	}
 
