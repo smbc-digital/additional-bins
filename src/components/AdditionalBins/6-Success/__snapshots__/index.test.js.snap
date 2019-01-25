@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Success snapshot renders correctly 1`] = `
+Array [
+  <section
+    className="header-container"
+  >
+    <h1>
+      Request an additional black bin
+    </h1>
+    <p
+      className="h2"
+    >
+      Thanks for your request
+    </p>
+  </section>,
+  <p>
+    <strong>
+      Your reference number is:
+    </strong>
+     
+     
+  </p>,
+  <p>
+    Please keep this number safe as you'll need it for the next step. You'll also receive an email with this information.
+  </p>,
+  <h2>
+    What happens next
+  </h2>,
+  <p>
+    You must download and fill in a waste diary to help us understand why you need an additional black bin. You'll need to record the waste you put in your black bin over 7 days.
+  </p>,
+  <p>
+    You can use the button below to download the waste diary. You'll also receive a link in the email if you want to complete it later. The email will tell you how to return your waste diary to us once you’ve completed it.
+  </p>,
+  <a
+    className="button-primary"
+    href="https://s3-eu-west-1.amazonaws.com/live-iag-static-assets/pdf/BinCalendars/Waste+diary+v2.pdf"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Download a waste diary (PDF 66Kb)
+  </a>,
+]
+`;

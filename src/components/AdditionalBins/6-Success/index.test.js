@@ -2,7 +2,7 @@ import React from 'react'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { Success } from './index'
-//import renderer from 'react-test-renderer'
+import renderer from 'react-test-renderer'
 
 
 Enzyme.configure({ adapter: new Adapter() })
@@ -54,19 +54,19 @@ it('should show non triage success page when theres a receipt number',() => {
     expect(wrapper.find('h3').exists()).toBe(false)
 })
 
-//     describe('snapshot', () => {
-//     it('renders correctly', () => {
-//         const context = {
-//             
-//             }
-//
+    describe('snapshot', () => {
+    it('renders correctly', () => {
+        const context = {
+            
+            }
 
-//         const tree = renderer
-//             .create(< Success context={context} />)
-//             .toJSON()
-//         expect(tree).toMatchSnapshot()
-//     })
-//})
+
+        const tree = renderer
+            .create(< Success context={context} />)
+            .toJSON()
+        expect(tree).toMatchSnapshot()
+    })
+})
 
 
 })
