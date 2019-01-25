@@ -110,7 +110,7 @@ Array [
     </label>
     <input
       aria-label="Enter the postcode"
-      className=""
+      className=" address-picker-input"
       id="postcode"
       inputMode={undefined}
       maxLength={undefined}
