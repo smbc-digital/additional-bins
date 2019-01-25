@@ -12,11 +12,6 @@ export class  OrderRecyclingBins extends Component{
         ReactGA.pageview(getPageRoute(8))
     }
 
-    onSubmit = (event) => {
-        event.preventDefault()
-        window.location.assign(ORDERRECYCLINGBINS)
-    }
-
     componentDidMount() {
         showBreadCrumbs(true)
         showAToZFooter(true)
@@ -35,7 +30,7 @@ export class  OrderRecyclingBins extends Component{
                     <li>have more space in your black bin for your non-recyclable waste</li>
                 </ul>
                 <p>Use the button below to order additional recycling bins.</p>
-                <a href="https://www.stockport.gov.uk/start/additional-recycling-bins" className='button-primary'>Order additional recycling bins</a>
+                <a href={ORDERRECYCLINGBINS} className='button-primary'>Order additional recycling bins</a>
             </form>
         </Fragment>
     )

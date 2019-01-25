@@ -2,7 +2,7 @@
 
 exports[`OrderRecyclingBins snapshot renders correctly 1`] = `
 <form
-  onSubmit={[Function]}
+  onSubmit={undefined}
 >
   <h1>
     It looks like you need additional recycling bins
