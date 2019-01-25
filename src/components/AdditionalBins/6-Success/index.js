@@ -1,7 +1,8 @@
 import React, { Fragment, Component } from 'react'
 import PropTypes from 'prop-types'
 import withContext from '../../WithContext'
-import {showBreadCrumbs, appendBreadCrumb} from '../../../helpers/breadcrumbHelper'
+import showBreadCrumbs from '../../../helpers/breadcrumbHelper'
+import  appendBreadCrumb from '../../../helpers/breadCrumbAppendHelper'
 import showAToZFooter from '../../../helpers/aToZFooterHelper'
 import { HEADING } from '../../Config'
 
@@ -14,7 +15,7 @@ export class Success extends Component {
 
     componentDidMount = () => {
         showBreadCrumbs(true)
-        appendBreadCrumb("Request a new bin", "https://www.stockport.gov.uk/topic/request-a-new-bin")
+        appendBreadCrumb('Request a new bin', 'https://www.stockport.gov.uk/topic/request-a-new-bin')
         showAToZFooter(true)
     }
 
