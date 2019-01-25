@@ -2,7 +2,7 @@ import React, { Fragment, Component} from 'react'
 import ReactGA from 'react-ga'
 import { getPageRoute } from '../../../helpers/pagehelper'
 import withContext from '../../WithContext'
-import { ORDERRECYCLINGBINS } from '../../Config'
+import { OrderRecyclingBinsLink } from '../../Config'
 import showBreadCrumbs from '../../../helpers/breadcrumbHelper'
 import showAToZFooter from  '../../../helpers/aToZFooterHelper'
 
@@ -30,7 +30,7 @@ export class  OrderRecyclingBins extends Component{
                     <li>have more space in your black bin for your non-recyclable waste</li>
                 </ul>
                 <p>Use the button below to order additional recycling bins.</p>
-                <a href={ORDERRECYCLINGBINS} className='button-primary'>Order additional recycling bins</a>
+                <a href={OrderRecyclingBinsLink} className='button-primary'>Order additional recycling bins</a>
             </form>
         </Fragment>
     )

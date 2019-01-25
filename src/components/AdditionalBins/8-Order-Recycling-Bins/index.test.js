@@ -3,7 +3,6 @@ import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import ReactGA from 'react-ga'
 import { OrderRecyclingBins } from './index'
-import { ORDERRECYCLINGBINS } from '../../Config'
 import renderer from 'react-test-renderer'
 
 
