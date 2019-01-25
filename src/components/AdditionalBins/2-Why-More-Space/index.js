@@ -17,19 +17,19 @@ export const WhyMoreSpace = ({ context: { onChange, whyMoreSpace, whyMoreSpaceOt
             label: 'Medical or healthcare waste',
             id: 'medical-healthcare',
             name: 'whyMoreSpace',
-            value: 'medical-healthcare'
+            value: 'MED'
         },
         {
             label: 'There are 6 or more people in the house',
             id: 'more-people',
             name: 'whyMoreSpace',
-            value: 'more-people'
+            value: 'LAR'
         },
         {
             label: 'Other',
             id: 'other',
             name: 'whyMoreSpace',
-            value: 'other',
+            value: 'WAS',
             renderIfChecked: () => <TextAreaInputContainer
                 value={whyMoreSpaceOther.value}
                 isValid={whyMoreSpaceOther.isValid}
@@ -58,7 +58,7 @@ export const WhyMoreSpace = ({ context: { onChange, whyMoreSpace, whyMoreSpaceOt
                     value={whyMoreSpace.value}
                     displayHeading={false}
                 />
-                <Button label='Next step' isValid={whyMoreSpace.value === 'other' ? whyMoreSpaceOther.isValid : whyMoreSpace.isValid} />
+                <Button label='Next step' isValid={whyMoreSpace.value === 'WAS' ? whyMoreSpaceOther.isValid : whyMoreSpace.isValid} />
             </form>
             <Anchor label='Previous' history={history} />
         </Fragment>

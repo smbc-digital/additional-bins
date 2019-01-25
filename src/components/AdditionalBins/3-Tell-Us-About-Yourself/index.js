@@ -16,7 +16,7 @@ export class TellUsAboutYourself extends Component {
     onSubmit = async (event) => {
         event.preventDefault()
         const { context, history } = this.props
-        if(context.whyMoreSpace.value !== 'other')
+        if(context.whyMoreSpace.value !== 'WAS')
         {
             history.push(getPageRoute(4))
         }

@@ -34,7 +34,7 @@ describe('WhyMoreSpace', () => {
         const history = { push: jest.fn() }
         const context = {
             whyMoreSpace: {
-                value: 'other',
+                value: 'WAS',
                 isValid: true
             },
             whyMoreSpaceOther: {

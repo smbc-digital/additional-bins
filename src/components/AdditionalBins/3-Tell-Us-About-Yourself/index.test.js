@@ -75,7 +75,7 @@ it('should submit the form and go to page 4 when user does not select other on t
                 isValid: false
             },
             whyMoreSpace : {
-                value: 'other',
+                value: 'WAS',
                 isValid: true
             },
             onFormSubmission: jest.fn()
@@ -117,7 +117,7 @@ it('should submit the form and go to page 4 when user does not select other on t
                     isValid: false
                 },
                 whyMoreSpace : {
-                    value: 'other',
+                    value: 'WAS',
                     isValid: true
                 }
             }

@@ -40,7 +40,7 @@ Array [
           name="whyMoreSpace"
           onChange={[Function]}
           type="radio"
-          value="medical-healthcare"
+          value="MED"
         />
         <label
           htmlFor="medical-healthcare"
@@ -58,7 +58,7 @@ Array [
           name="whyMoreSpace"
           onChange={[Function]}
           type="radio"
-          value="more-people"
+          value="LAR"
         />
         <label
           htmlFor="more-people"
@@ -76,7 +76,7 @@ Array [
           name="whyMoreSpace"
           onChange={[Function]}
           type="radio"
-          value="other"
+          value="WAS"
         />
         <label
           htmlFor="other"
