@@ -4,9 +4,7 @@ import withContext from '../../WithContext'
 import showBreadCrumbs from '../../../helpers/breadcrumbHelper'
 import  appendBreadCrumb from '../../../helpers/breadCrumbAppendHelper'
 import showAToZFooter from '../../../helpers/aToZFooterHelper'
-import { HEADING } from '../../Config'
-import { PDFLink } from '../../Config'
-import { PDFSize } from '../../Config'
+import { HEADING, PDFLink, PDFSize } from '../../Config'
 
 export class Success extends Component {
 
