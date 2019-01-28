@@ -4,31 +4,45 @@ exports[`OrderRecyclingBins snapshot renders correctly 1`] = `
 <form
   onSubmit={undefined}
 >
-  <h1>
-    It looks like you need additional recycling bins
-  </h1>
-  <h2>
-    What you can do next
-  </h2>
-  <p>
-    You can order additional recycling bins so that you
-  </p>
-  <ul>
-    <li>
-      recycle as much as possible
-    </li>
-    <li>
-      have more space in your black bin for your non-recyclable waste
-    </li>
-  </ul>
-  <p>
-    Use the button below to order additional recycling bins.
-  </p>
-  <a
-    className="button-primary"
-    href="https://www.stockport.gov.uk/start/additional-recycling-bins"
+  <div
+    className="ineligible-warning"
   >
-    Order additional recycling bins
-  </a>
+    <div
+      className="header-container"
+    >
+      <div>
+        <i
+          aria-hidden="true"
+          className="fa fa-exclamation"
+        />
+      </div>
+      <h1>
+        It looks like you need additional recycling bins
+      </h1>
+    </div>
+    <h2>
+      What you can do next
+    </h2>
+    <p>
+      You can order additional recycling bins so that you
+    </p>
+    <ul>
+      <li>
+        recycle as much as possible
+      </li>
+      <li>
+        have more space in your black bin for your non-recyclable waste
+      </li>
+    </ul>
+    <p>
+      Use the button below to order additional recycling bins.
+    </p>
+    <a
+      className="button-primary"
+      href="https://www.stockport.gov.uk/start/additional-recycling-bins"
+    >
+      Order additional recycling bins
+    </a>
+  </div>
 </form>
 `;
