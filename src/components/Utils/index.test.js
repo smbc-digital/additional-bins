@@ -99,4 +99,85 @@ describe('submitForm', () => {
         await expect(submitForm(data))
         expect(fetch).toHaveBeenCalledWith('/additional-black-bin/submit', expect.anything())
     })
+
+
+    it('should remove script from content when submitting to frontend', async () => {
+
+        let expectedResult = {status: 200}
+
+        const expectedContext = {
+            whyMoreSpace : '',
+            firstName : 'shdshdshtextetxetxtexte more text helpim stuckinahere',
+            lastName: 'valid'
+        }
+
+        let data = {
+            whyMoreSpace : {
+				value: '<script>alert(\'alert\')</script>',
+				isValid: true
+            },
+            firstName : {
+				value: 'shdshdshtextetxetxtexte more text<script>alert(\'alert\')</script> helpim stuckinahere',
+				isValid: true
+            },
+            lastName: {
+                value: 'valid',
+				isValid: true
+            }
+        }
+        
+        let expectedFetch = {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json; charset=utf-8',
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+            body: JSON.stringify(expectedContext)
+        }
+
+        fetch.mockResponse(JSON.stringify(expectedResult))
+
+        await expect(submitForm(data))
+        expect(fetch).toHaveBeenCalledWith(expect.anything(), expectedFetch)
+    })
+
+    it('should remove html tag from content when submitting to frontend', async () => {
+
+        let expectedResult = {status: 200}
+
+        const expectedContext = {
+            whyMoreSpace : 'foo',
+            firstName: 'valid',
+            lastName: 'valid'
+        }
+
+        let data = {
+            whyMoreSpace : {
+				value: '<h1>foo</h1>',
+				isValid: true
+            },
+            firstName: {
+                value: '<p>valid</p>',
+				isValid: true
+            },
+            lastName: {
+                value: 'valid',
+				isValid: true
+            }
+        }
+        
+        let expectedFetch = {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json; charset=utf-8',
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+            body: JSON.stringify(expectedContext)
+        }
+
+        fetch.mockResponse(JSON.stringify(expectedResult))
+
+        await expect(submitForm(data))
+        expect(fetch).toHaveBeenCalledWith(expect.anything(), expectedFetch)
+    })
 })

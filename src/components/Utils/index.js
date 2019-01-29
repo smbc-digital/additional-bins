@@ -1,5 +1,6 @@
 import 'isomorphic-fetch'
 import Timeout from 'await-timeout'
+import sanitizeHtml from 'sanitize-html'
 
 async function submitForm(context) {
     const convertedContext = {}
@@ -7,7 +8,14 @@ async function submitForm(context) {
     
     Object.keys(context).map(key => {
         if (context[key] !== undefined && context[key].value !== undefined) {
-            convertedContext[key] = context[key].value
+            if(typeof context[key].value === 'object'){
+                convertedContext[key] = context[key].value
+            } else {
+                convertedContext[key] = sanitizeHtml(context[key].value, {
+                    allowedTags: [],
+                    allowedAttributes: {}
+                  })
+            }
         }
     })
 
