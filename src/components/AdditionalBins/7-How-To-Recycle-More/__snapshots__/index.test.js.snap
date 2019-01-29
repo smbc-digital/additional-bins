@@ -1,28 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HowToRecycleMore snapshot renders correctly 1`] = `
-Array [
-  <h1>
-    We're sorry but you can't request an additional black bin
-  </h1>,
+<div
+  className="ineligible-warning"
+>
+  <div
+    className="header-container"
+  >
+    <div>
+      <i
+        aria-hidden="true"
+        className="fa fa-exclamation"
+      />
+    </div>
+    <h1>
+       We're sorry but you can't request an additional black bin
+    </h1>
+  </div>
   <h2>
     Why not?
-  </h2>,
+  </h2>
   <p>
     You must recycle as much of your waste as possible.
-  </p>,
+  </p>
   <h3>
     What you can do next
-  </h3>,
+  </h3>
   <p>
     To find out about what goes in each bin and how you can recycle as much waste as possible, visit our recycling pages using the button below.
-  </p>,
+  </p>
   <a
     className="button-primary"
     href="https://www.stockport.gov.uk/what-you-can-put-in-your-bins"
     id="what-you-can-put-in-your-bins"
   >
     What you can put in your bins
-  </a>,
-]
+  </a>
+</div>
 `;
