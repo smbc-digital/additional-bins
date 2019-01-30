@@ -14,7 +14,7 @@ const appendBreadcrumb = (breadcrumbText, url) => {
         }
         ul.innerHTML = ''
         for(let i = 0; i < arr.length; i++){
-            ul.append(arr[i])
+            ul.appendChild(arr[i])
         }
     }
 }
