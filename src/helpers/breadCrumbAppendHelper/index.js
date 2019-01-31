@@ -12,6 +12,7 @@ const appendBreadcrumb = (breadcrumbText, url) => {
            for(let index = 0; index < breadCrumbListItems.length; index++)
            {
                 let listItem = breadCrumbListItems[index]
+                listItem.innerHTML = breadCrumbListItems[index].innerHTML
                 arr.push(listItem)
            }
            arr.splice(lastbutone, 0, li)           
