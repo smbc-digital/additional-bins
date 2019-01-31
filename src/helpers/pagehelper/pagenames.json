@@ -16,6 +16,10 @@
 		"route":"/additional-black-bin/payment"
 	},
 	{
+		"number": 5,
+		"route":"/additional-black-bin/submit-your-form"
+	},
+	{
 		"number": 6,
 		"route":"/additional-black-bin/success"
 	},

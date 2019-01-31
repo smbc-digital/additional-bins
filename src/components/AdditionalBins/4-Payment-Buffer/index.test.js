@@ -4,6 +4,7 @@ import Adapter from 'enzyme-adapter-react-16'
 import { getPageRoute } from '../../../helpers/pagehelper'
 import * as submitForm from '../../Utils'
 import { PaymentBuffer } from './index'
+import renderer from 'react-test-renderer'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -98,4 +99,24 @@ describe('PaymentBuffer', () => {
         expect(wrapper.state().recaptchaValid).toBe(true)
     })
 
+    describe('snapshot', () => {
+        it('renders correctly', () => {
+            const context = {
+                whyMoreSpace: {
+                    value: '',
+                    isValid : false
+                },
+                whyMoreSpaceOther: {
+                    value: '',
+                    isValid: false
+                }
+            }
+
+            const tree = renderer
+                .create(<PaymentBuffer context={context} />)
+                .toJSON()
+                
+            expect(tree).toMatchSnapshot()
+        })
+    })
 })

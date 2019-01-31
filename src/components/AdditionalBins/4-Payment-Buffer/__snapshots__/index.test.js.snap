@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentBuffer snapshot renders correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <h1>
+    Request an additional black bin
+  </h1>
+  <p>
+    You're now ready to pay for the bin, use the button below to go to our payments page.
+  </p>
+  <p>
+    Continue to our payment page to fill in your card details and complete your order.
+  </p>
+  <p>
+    The cost is 
+    £10
+    .
+  </p>
+  <button
+    className="button-primary"
+    disabled={false}
+    id="continue-to-payment"
+    type="submit"
+  >
+    Continue to payment
+  </button>
+  <p>
+    <a
+      href="#"
+      onClick={[Function]}
+    >
+      Previous
+    </a>
+  </p>
+</form>
+`;

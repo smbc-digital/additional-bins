@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubmitYourForm snapshot renders correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <h1>
+    Request an additional black bin
+  </h1>
+  <h2>
+    Submit your form
+  </h2>
+  <p>
+    Now that you've completed the form, use the button below to submit it.
+  </p>
+  <button
+    className="button-primary"
+    disabled={false}
+    id="submit-your-form"
+    type="submit"
+  >
+    Submit
+  </button>
+  <p>
+    <a
+      href="#"
+      onClick={[Function]}
+    >
+      Previous
+    </a>
+  </p>
+</form>
+`;

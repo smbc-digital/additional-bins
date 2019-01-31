@@ -4,8 +4,6 @@ import Adapter from 'enzyme-adapter-react-16'
 import { TellUsAboutYourself } from './index'
 import renderer from 'react-test-renderer'
 import getPageRoute from '../../../helpers/pagehelper'
-import * as submitForm from '../../Utils'
-
 
 Enzyme.configure({ adapter: new Adapter() })
 describe('TellUsAboutYourself',() => { 
@@ -50,7 +48,7 @@ it('should submit the form and go to page 4 when user does not select other on t
     expect(history.push).toHaveBeenCalledWith(getPageRoute(4))
     })
 
-    it('should submit the form and go to page 6 when user does not select other on the previous page', async () => {
+    it('should submit the form and go to page 6 when user selects other on the previous page', async () => {
         // Arrange
         const history = { push: jest.fn() }
         const context = {
@@ -77,10 +75,8 @@ it('should submit the form and go to page 4 when user does not select other on t
             whyMoreSpace : {
                 value: 'WAS',
                 isValid: true
-            },
-            onFormSubmission: jest.fn()
+            }
         }
-        submitForm.default = jest.fn().mockReturnValue({ status: 200, caseId: '12345678' })
     
         const wrapper = mount(<TellUsAboutYourself context={context} history={history} />)
     
@@ -88,51 +84,8 @@ it('should submit the form and go to page 4 when user does not select other on t
         await wrapper.find('form').simulate('submit')
     
         // Assert
-        expect(context.onFormSubmission).toBeCalledWith('12345678')
-        expect(history.push).toHaveBeenCalledWith(getPageRoute(6))
+        expect(history.push).toHaveBeenCalledWith(getPageRoute(5))
         })
-
-        it('should submit the form and go to page 11 when user does not select other on the previous page and 400 status from frontend', async () => {
-            // Arrange
-            const history = { push: jest.fn() }
-            const context = {
-                address : {
-                    value: '',
-                    isValid: false
-                },
-                firstName : {
-                    value: '',
-                    isValid: false
-                },
-                lastName : {
-                    value: '',
-                    isValid: false
-                },
-                emailAddress : {
-                    value: '',
-                    isValid: false
-                },
-                phoneNumber : {
-                    value: '',
-                    isValid: false
-                },
-                whyMoreSpace : {
-                    value: 'WAS',
-                    isValid: true
-                }
-            }
-            submitForm.default = jest.fn().mockReturnValue({ status: 400 })
-        
-            const wrapper = mount(<TellUsAboutYourself context={context} history={history} />)
-        
-        
-            // Act
-          await wrapper.find('form').simulate('submit')
-        
-        
-            // Assert
-            expect(history.push).toHaveBeenCalledWith(getPageRoute(11))
-            })
 
     it('should find the elements required',() => { 
         // Arrange

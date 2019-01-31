@@ -2,7 +2,6 @@ import React, { Fragment, Component } from 'react'
 import PropTypes from 'prop-types'
 import withContext from '../../WithContext'
 import { getPageRoute } from '../../../helpers/pagehelper'
-import SubmitUtil from '../../Utils'
 import { TextInputContainer, Button, Anchor, AddressPicker } from 'smbc-react-components'
 
 export class TellUsAboutYourself extends Component {
@@ -13,7 +12,7 @@ export class TellUsAboutYourself extends Component {
             }
     }
 
-    onSubmit = async (event) => {
+    onSubmit = (event) => {
         event.preventDefault()
         const { context, history } = this.props
         if(context.whyMoreSpace.value !== 'WAS')
@@ -21,14 +20,7 @@ export class TellUsAboutYourself extends Component {
             history.push(getPageRoute(4))
         }
         else {
-            this.setState({ isLoading: true })
-            let rawResponse = await SubmitUtil(context)
-            if(rawResponse.status === 200){
-                context.onFormSubmission(rawResponse.caseId)
-                history.push(getPageRoute(6))
-            } else {
-                history.push(getPageRoute(11))
-            }
+            history.push(getPageRoute(5))
         }
     }
     

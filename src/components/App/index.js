@@ -9,6 +9,7 @@ import PaymentBuffer from '../AdditionalBins/4-Payment-Buffer'
 import Success from '../AdditionalBins/6-Success'
 import HowToRecycleMore from '../AdditionalBins/7-How-To-Recycle-More'
 import OrderRecyclingBins from '../AdditionalBins/8-Order-Recycling-Bins'
+import SubmitYourForm from '../AdditionalBins/5-Submit-Your-Form'
 
 class App extends Component {
     render() {
@@ -18,6 +19,7 @@ class App extends Component {
                 <Route exact path={getPageRoute(2)} component={ WhyMoreSpace } />
                 <Route exact path={getPageRoute(3)} component={ TellUsAboutYourself } />
                 <Route exact path={getPageRoute(4)} component={ PaymentBuffer } />
+                <Route exact path={getPageRoute(5)} component={ SubmitYourForm } />
                 <Route exact path={getPageRoute(6)} component={ Success } />
                 <Route exact path={getPageRoute(7)} component={ HowToRecycleMore} />
                 <Route exact path={getPageRoute(8)} component={ OrderRecyclingBins } />
