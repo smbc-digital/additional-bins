@@ -11,7 +11,8 @@ const appendBreadcrumb = (breadcrumbText, url) => {
         if (breadCrumbListItems.length !== 0){
            for(let index = 0; index < breadCrumbListItems.length; index++)
            {
-               arr.push(breadCrumbListItems[index])
+                listItem = breadCrumbListItems[index]
+                arr.push(listItem)
            }
            arr.splice(lastbutone, 0, li)           
         }
@@ -19,7 +20,7 @@ const appendBreadcrumb = (breadcrumbText, url) => {
         for(let i = 0; i < arr.length; i++){
             ul.appendChild(arr[i])
         }
-        console.log(ul.outerHTML)
+        
     }
 }
 
