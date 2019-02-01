@@ -141,7 +141,6 @@ describe('SubmitYourForm', () => {
                 isLoading: false
             }
     
-    
             const tree = renderer
                 .create(<SubmitYourForm context={context} />)
                 .toJSON()

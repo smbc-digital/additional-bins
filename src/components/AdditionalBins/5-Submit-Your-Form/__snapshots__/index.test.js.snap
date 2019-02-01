@@ -13,13 +13,6 @@ exports[`SubmitYourForm snapshot renders correctly 1`] = `
   <p>
     Now that you've completed the form, use the button below to submit it.
   </p>
-  <div
-    className="recaptcha"
-  >
-    <div
-      name="recaptcharesult"
-    />
-  </div>
   <button
     className="button-primary"
     disabled={false}
