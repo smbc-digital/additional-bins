@@ -44,7 +44,7 @@ export class SubmitYourForm extends Component {
                 <h1>{ HEADING }</h1>
                 <h2>Submit your form</h2>
                 <p>Now that you&apos;ve completed the form, use the button below to submit it.</p>
-                {displayRecaptcha && 
+                {!displayRecaptcha && 
                     <div className="recaptcha">
                         <ReCAPTCHA
                             sitekey="6LfAeSIUAAAAAGsx6tYHz4MIvhP0pSx9Tq7Hf8Yx"
