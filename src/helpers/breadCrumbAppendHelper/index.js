@@ -7,19 +7,19 @@ const appendBreadcrumb = (breadcrumbText, url) => {
         let breadCrumbListItems = ul.getElementsByTagName('li')
         let listSize = breadCrumbListItems.length
         let lastbutone = listSize - 1
-        let arr = []
+        let arrayOfListItems = []
         if (breadCrumbListItems.length !== 0){
            for(let index = 0; index < breadCrumbListItems.length; index++)
            {
-                let listItem = breadCrumbListItems[index]
-                listItem.innerHTML = breadCrumbListItems[index].innerHTML
-                arr.push(listItem)
+                let listItem = document.createElement('li')
+                listItem.append(breadCrumbListItems[index].innerHTML)
+                arrayOfListItems.push(listItem)
            }
-           arr.splice(lastbutone, 0, li)           
+           arrayOfListItems.splice(lastbutone, 0, li)           
         }
         ul.innerHTML = ''
-        for(let i = 0; i < arr.length; i++){
-            ul.appendChild(arr[i])
+        for(let i = 0; i < arrayOfListItems.length; i++){
+            ul.appendChild(arrayOfListItems[i])
         }
         
     }
