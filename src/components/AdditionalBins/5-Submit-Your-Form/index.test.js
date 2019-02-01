@@ -137,26 +137,8 @@ describe('SubmitYourForm', () => {
     describe('snapshot', () => {
         it('renders correctly', () => {
             const context = {
-                address : {
-                    value: 'a',
-                    isValid: false
-                },
-                firstName : {
-                    value: 'b',
-                    isValid: false
-                },
-                lastName : {
-                    value: 'c',
-                    isValid: false
-                },
-                emailAddress : {
-                    value: 'd',
-                    isValid: false
-                },
-                phoneNumber : {
-                    value: 'e',
-                    isValid: false
-                }
+                recaptchaValid: false,
+                isLoading: false
             }
     
     
