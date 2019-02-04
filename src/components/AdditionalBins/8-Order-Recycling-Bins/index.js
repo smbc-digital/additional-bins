@@ -22,7 +22,6 @@ export class OrderRecyclingBins extends Component {
 	render() {
 		return (
 			<Fragment>
-				<form onSubmit={this.onSubmit}>
 					<div className="ineligible-warning">
 						<div className="header-container">
 							<div>
@@ -41,7 +40,6 @@ export class OrderRecyclingBins extends Component {
 							Order additional recycling bins
 						</a>
 					</div>
-				</form>
 			</Fragment>
 		)
 	}
