@@ -17,8 +17,10 @@ exports[`FailedPayment snapshot should render correctly 1`] = `
        We're sorry, the payment was unsuccessful
     </h1>
   </div>
-  <p>
-    Something went wrong. Please try again if you want to continue with the order
+  <p
+    className="no-margin-bottom"
+  >
+    Something went wrong. Please try again if you want to continue with the order.
   </p>
   <a
     className="button-primary"
