@@ -27,7 +27,7 @@ class FailedPayment extends Component {
             </div>
             <p className="no-margin-bottom">Something went wrong. Please try again if you want to continue with the order.</p>
             <a className="button-primary" href={parsedQueryString.paymenturl}>Continue with the order</a>
-            <a className="button-secondary anchor-as-block" href="https://stockport.gov.uk/">Go to the homepage</a>
+            <a className="button-secondary anchor-as-block" href="https://www.stockport.gov.uk/">Go to the homepage</a>
         </div>
     }
 }

@@ -30,7 +30,7 @@ exports[`FailedPayment snapshot should render correctly 1`] = `
   </a>
   <a
     className="button-secondary anchor-as-block"
-    href="https://stockport.gov.uk/"
+    href="https://www.stockport.gov.uk/"
   >
     Go to the homepage
   </a>
