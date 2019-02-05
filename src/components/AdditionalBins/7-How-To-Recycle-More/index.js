@@ -20,6 +20,7 @@ export class HowToRecycleMore extends Component {
     render() {
         return(
             <Fragment>
+                <form>
                     <div className="ineligible-warning">
                     <div className="header-container">
                     
@@ -35,9 +36,7 @@ export class HowToRecycleMore extends Component {
                     <p>To find out about what goes in each bin and how you can recycle as much waste as possible, visit our recycling pages using the button below.</p>
                     <a className='button-primary' href={WhatYouCanPutInYourBinsLink} id='what-you-can-put-in-your-bins'>What you can put in your bins</a>
                     </div>
-                    
-                    
-                    
+                 </form>   
             </Fragment>
         )
     }

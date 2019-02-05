@@ -1,38 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FailedPayment snapshot should render correctly 1`] = `
-<div
-  className="ineligible-warning"
->
+<form>
   <div
-    className="header-container"
+    className="ineligible-warning"
   >
-    <div>
-      <i
-        aria-hidden="true"
-        className="fa fa-exclamation"
-      />
+    <div
+      className="header-container"
+    >
+      <div>
+        <i
+          aria-hidden="true"
+          className="fa fa-exclamation"
+        />
+      </div>
+      <h1>
+         We're sorry, the payment was unsuccessful
+      </h1>
     </div>
-    <h1>
-       We're sorry, the payment was unsuccessful
-    </h1>
+    <p
+      className="no-margin-bottom"
+    >
+      Something went wrong. Please try again if you want to continue with the order.
+    </p>
+    <a
+      className="button-primary"
+      href="test"
+    >
+      Continue with the order
+    </a>
+    <a
+      className="button-secondary anchor-as-block"
+      href="https://www.stockport.gov.uk/"
+    >
+      Go to the homepage
+    </a>
   </div>
-  <p
-    className="no-margin-bottom"
-  >
-    Something went wrong. Please try again if you want to continue with the order.
-  </p>
-  <a
-    className="button-primary"
-    href="test"
-  >
-    Continue with the order
-  </a>
-  <a
-    className="button-secondary anchor-as-block"
-    href="https://www.stockport.gov.uk/"
-  >
-    Go to the homepage
-  </a>
-</div>
+</form>
 `;

@@ -18,7 +18,8 @@ class FailedPayment extends Component {
     render() {
         const { parsedQueryString } = this
 
-        return <div className="ineligible-warning">
+        return <form>
+            <div className="ineligible-warning">
             <div className="header-container">
                 <div>
                     <i className="fa fa-exclamation" aria-hidden="true" />
@@ -29,6 +30,8 @@ class FailedPayment extends Component {
             <a className="button-primary" href={parsedQueryString.paymenturl}>Continue with the order</a>
             <a className="button-secondary anchor-as-block" href="https://www.stockport.gov.uk/">Go to the homepage</a>
         </div>
+        </form>
+  
     }
 }
 
