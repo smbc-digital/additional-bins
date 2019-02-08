@@ -8,49 +8,76 @@ import renderer from 'react-test-renderer'
 Enzyme.configure({ adapter: new Adapter() })
 describe('Success',() => { 
 
-it('should find elements required',() => { 
-    // Arrange
-    const context = {
-        success: {
-            value: '',
+    it('should find elements required',() => { 
+        // Arrange
+        const context = {
+            success: {
+                value: '',
+            }
         }
-    }
-    const wrapper = mount(<Success context={context} />)
-    // Act
+        const history = {
+            block: jest.fn()
+        }
 
-    // Assert
-    expect(wrapper.find('h1','h2','p','a').exists()).toBe(true)
-})
+        const wrapper = mount(<Success context={context} history={history} />)
+        // Act
 
-it('should show non triage success page when theres a receipt number',() => { 
-    // Arrange
-    const context = {
-        success: {
-            value: '',
-        },
-        receiptNumber: '1'
-    }
-    const wrapper = mount(<Success context={context} />)
+        // Assert
+        expect(wrapper.find('h1','h2','p','a').exists()).toBe(true)
+    })
 
-    // Act
+    it('should show non triage success page when theres a receipt number',() => { 
+        // Arrange
+        const context = {
+            success: {
+                value: '',
+            },
+            receiptNumber: '1'
+        }
+        const history = {
+            block: jest.fn()
+        }
 
-    // Assert
-    expect(wrapper.find('h3').exists()).toBe(false)
-})
+        const wrapper = mount(<Success context={context} history={history} />)
+
+        // Act
+
+        // Assert
+        expect(wrapper.find('h3').exists()).toBe(false)
+    })
+
+    it('should block history', () => {
+        // Arrange
+        const context = {
+            success: {
+                value: '',
+            },
+            receiptNumber: '1'
+        }
+        const history = {
+            block: jest.fn()
+        }
+
+        mount(<Success context={context} history={history} />)
+        // Assert
+        expect(history.block).toBeCalled()
+    })
 
     describe('snapshot', () => {
-    it('renders correctly', () => {
-        const context = {
-            
+
+        it('renders correctly', () => {
+            const context = {
+                
+                }
+            const history = {
+                block: jest.fn()
             }
 
 
-        const tree = renderer
-            .create(< Success context={context} />)
-            .toJSON()
-        expect(tree).toMatchSnapshot()
+            const tree = renderer
+                .create(< Success context={context} history={history} />)
+                .toJSON()
+            expect(tree).toMatchSnapshot()
+        })
     })
-})
-
-
 })

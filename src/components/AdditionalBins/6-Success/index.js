@@ -21,6 +21,8 @@ export class Success extends Component {
 
     render() {
         const { crmCaseReference} = this.props.context
+        const { history } = this.props
+        history.block()
 
         return (
             <Fragment>
@@ -42,6 +44,7 @@ export class Success extends Component {
 
 Success.propTypes = {
     context: PropTypes.object,
+    history: PropTypes.object
 }
 
 
