@@ -39,7 +39,7 @@ export class TellUsAboutYourself extends Component {
                     <AddressPicker
                             name={'address'}
                             address={address.value}
-                            automaticLabel={'Enter the postcode'}
+                            automaticLabel={'Enter your postcode'}
                             automaticTextLabel={'Select the address below'}
                             useStockportPostcode={true}
                             enableHeading={false}

@@ -106,10 +106,10 @@ Array [
       className=""
       htmlFor="postcode"
     >
-      Enter the postcode
+      Enter your postcode
     </label>
     <input
-      aria-label="Enter the postcode"
+      aria-label="Enter your postcode"
       className=" address-picker-input"
       id="postcode"
       inputMode={undefined}
