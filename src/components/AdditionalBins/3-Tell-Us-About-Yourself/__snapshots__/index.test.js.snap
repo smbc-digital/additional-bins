@@ -19,6 +19,7 @@ Array [
     </label>
     <input
       aria-label="First name"
+      aria-live="off"
       className=""
       id="firstName"
       inputMode={undefined}
@@ -39,6 +40,7 @@ Array [
     </label>
     <input
       aria-label="Last name"
+      aria-live="off"
       className=""
       id="lastName"
       inputMode={undefined}
@@ -70,6 +72,7 @@ Array [
     </label>
     <input
       aria-label=""
+      aria-live=""
       className=""
       id="phoneNumber"
       inputMode={undefined}
@@ -90,6 +93,7 @@ Array [
     </label>
     <input
       aria-label="Email address"
+      aria-live="off"
       className=""
       id="emailAddress"
       inputMode={undefined}
@@ -110,6 +114,7 @@ Array [
     </label>
     <input
       aria-label="Enter your postcode"
+      aria-live="off"
       className=" address-picker-input"
       id="postcode"
       inputMode={undefined}
