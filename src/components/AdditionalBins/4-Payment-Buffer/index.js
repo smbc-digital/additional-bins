@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import { Button, Anchor } from 'smbc-react-components'
 import PropTypes from 'prop-types'
 import SubmitUtil from '../../Utils' 
-import { getPageRoute } from '../../../helpers/pagehelper'
 import withContext from '../../WithContext'
 import { PRICE, HEADING } from '../../Config'
 import ReCAPTCHA from 'react-google-recaptcha'
@@ -32,7 +31,7 @@ export class PaymentBuffer extends Component {
         if(rawResponse.status === 200){
             window.location.assign(rawResponse.url)
         } else{
-            history.push(getPageRoute(11))
+            history.push('error')
         }
     }
 

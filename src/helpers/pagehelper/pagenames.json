@@ -32,10 +32,6 @@
 		"route":"/additional-black-bin/order-recycling-bins"
 	},
 	{
-		"number": 11,
-		"route":"/additional-black-bin/something-went-wrong"
-	},
-	{
 		"number": 12,
 		"route":"/additional-black-bin/payment-failed"
 	}
