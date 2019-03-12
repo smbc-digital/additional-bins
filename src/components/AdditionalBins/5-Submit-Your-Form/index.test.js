@@ -46,7 +46,7 @@ describe('SubmitYourForm', () => {
 		await wrapper.find('form').simulate('submit')
 
         // Assert
-        expect(history.push).toHaveBeenCalledWith('error')
+        expect(history.push).toHaveBeenCalledWith(getPageRoute(9))
     })
 
     it('should not call push on submit when recaptcha is invalid', () => {

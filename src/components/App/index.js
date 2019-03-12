@@ -10,6 +10,7 @@ import Success from '../AdditionalBins/6-Success'
 import HowToRecycleMore from '../AdditionalBins/7-How-To-Recycle-More'
 import OrderRecyclingBins from '../AdditionalBins/8-Order-Recycling-Bins'
 import SubmitYourForm from '../AdditionalBins/5-Submit-Your-Form'
+import FailurePage from '../AdditionalBins/9-Failure-Page'
 import FailedPayment from '../AdditionalBins/12-FailedPayment'
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
                 <Route exact path={getPageRoute(6)} component={ Success } />
                 <Route exact path={getPageRoute(7)} component={ HowToRecycleMore} />
                 <Route exact path={getPageRoute(8)} component={ OrderRecyclingBins } />
+                <Route exact path={getPageRoute(9)} component={ FailurePage } />
                 <Route exact path={getPageRoute(12)} component={ FailedPayment } />
                 <Route exact path="/error" component={ ErrorPage } />
             </Switch>

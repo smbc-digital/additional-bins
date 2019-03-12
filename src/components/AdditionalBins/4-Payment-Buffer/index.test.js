@@ -4,6 +4,7 @@ import Adapter from 'enzyme-adapter-react-16'
 import * as submitForm from '../../Utils'
 import { PaymentBuffer } from './index'
 import renderer from 'react-test-renderer'
+import { getPageRoute } from '../../../helpers/pagehelper'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -44,7 +45,7 @@ describe('PaymentBuffer', () => {
 		await wrapper.find('form').simulate('submit')
 
         // Assert
-        expect(history.push).toHaveBeenCalledWith('error')
+        expect(history.push).toHaveBeenCalledWith(getPageRoute(9))
     })
 
     it('should not call push on submit when recaptcha is invalid', () => {

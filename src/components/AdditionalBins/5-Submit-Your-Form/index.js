@@ -32,7 +32,7 @@ export class SubmitYourForm extends Component {
                 context.onFormSubmission(rawResponse.caseId)
                 history.push(getPageRoute(6))
             } else {
-                history.push('error')
+                history.push(getPageRoute(9))
             }
     }
 
