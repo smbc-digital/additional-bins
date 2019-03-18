@@ -66,6 +66,10 @@
 		"setupFiles": [
 			"./setupJest.js"
 		],
+		"coverageReporters" : [
+			"text",
+			"json-summary"
+		],
 		"testURL": "http://localhost",
 		"coverageThreshold": {
 			"global": {
