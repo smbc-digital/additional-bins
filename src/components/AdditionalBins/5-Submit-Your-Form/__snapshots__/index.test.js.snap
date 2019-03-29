@@ -17,6 +17,7 @@ exports[`SubmitYourForm snapshot renders correctly 1`] = `
     className="button-primary"
     disabled={false}
     id="submit-your-form"
+    onClick={undefined}
     type="submit"
   >
     Submit
