@@ -14,7 +14,6 @@ Array [
     <fieldset>
       <div
         className="input-radio-container"
-        role="radiogroup"
       >
         <input
           defaultChecked={false}
@@ -33,7 +32,6 @@ Array [
       </div>
       <div
         className="input-radio-container"
-        role="radiogroup"
       >
         <input
           defaultChecked={false}
@@ -52,7 +50,6 @@ Array [
       </div>
       <div
         className="input-radio-container"
-        role="radiogroup"
       >
         <input
           defaultChecked={false}
@@ -71,7 +68,6 @@ Array [
       </div>
       <div
         className="input-radio-container"
-        role="radiogroup"
       >
         <input
           defaultChecked={false}
@@ -93,7 +89,6 @@ Array [
       className="button-primary"
       disabled={true}
       id={undefined}
-      onClick={undefined}
       type="submit"
     >
       Next step

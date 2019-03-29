@@ -15,14 +15,13 @@ exports[`PaymentBuffer snapshot renders correctly 1`] = `
   </p>
   <p>
     The cost is 
-    £10
+    £15
     .
   </p>
   <button
     className="button-primary"
     disabled={false}
     id="continue-to-payment"
-    onClick={undefined}
     type="submit"
   >
     Continue to payment
