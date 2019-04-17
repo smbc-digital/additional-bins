@@ -2,7 +2,7 @@ import 'isomorphic-fetch'
 import React, { Component } from 'react'
 import { Button, Anchor } from 'smbc-react-components'
 import PropTypes from 'prop-types'
-import SubmitUtil from '../../Utils'
+//import SubmitUtil from '../../Utils'
 import withContext from '../../WithContext'
 import { PRICE, HEADING } from '../../Config'
 import ReCAPTCHA from 'react-google-recaptcha'
@@ -25,8 +25,9 @@ export class PaymentBuffer extends Component {
 
     onSubmit = async (event) => {
         event.preventDefault()
-        const { context, history } = this.props
+        const { history } = this.props
 
+        //const { context, history } = this.props
         // this.setState({ isLoading: true })
         // let rawResponse = await SubmitUtil(context)
         // if(rawResponse.status === 200){
