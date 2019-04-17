@@ -14,22 +14,22 @@ describe('PaymentBuffer', () => {
         fetch.resetMocks()
     })
 
-    // it('should call push on submit with the correct next page url when response is 200', async () => {
-    //     // Arrange
-    //     const url = 'http://www.test.url/paymentTest'
-    //     const data = {}
-    //     const history = { push: jest.fn() }
-    //     window.location.assign = jest.fn()
-    //     submitForm.default = jest.fn().mockReturnValue({ status: 200, url: url })
+    it('should call push on submit with the correct next page url when response is 200', async () => {
+        // Arrange
+        const url = 'http://www.test.url/paymentTest'
+        const data = {}
+        const history = { push: jest.fn() }
+        window.location.assign = jest.fn()
+        submitForm.default = jest.fn().mockReturnValue({ status: 200, url: url })
 
-    //     const wrapper = mount(<PaymentBuffer context={data} history={history} />)
+        const wrapper = mount(<PaymentBuffer context={data} history={history} />)
         
-    //    // Act
-	// 	await wrapper.find('form').simulate('submit')
+       // Act
+		await wrapper.find('form').simulate('submit')
 
-	// 	// Assert
-    //     expect(window.location.assign).toHaveBeenCalledWith(url)
-    // })
+		// Assert
+        expect(window.location.assign).toHaveBeenCalledWith(url)
+    })
 
     it('should call push on submit with an error page when reponse is not 200', async () => {
         // Arrange
@@ -45,7 +45,7 @@ describe('PaymentBuffer', () => {
 		await wrapper.find('form').simulate('submit')
 
         // Assert
-        expect(history.push).toHaveBeenCalledWith(getPageRoute(5))
+        expect(history.push).toHaveBeenCalledWith(getPageRoute(9))
     })
 
     it('should not call push on submit when recaptcha is invalid', () => {
