@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BinNotAvailable snapshot renders correctly 1`] = `
+<h1>
+  The bin is not available
+</h1>
+`;

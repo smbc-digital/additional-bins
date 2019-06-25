@@ -37,11 +37,13 @@ async function submitForm(context) {
         const jsonResponse = JSON.parse(responseObject)
         const paymentUrl = jsonResponse.url
         const caseId = jsonResponse.caseID
+        const isBinNotAvailable = jsonResponse.isBinNotAvailable
 
         return {
             status: result.status,
             url: paymentUrl,
-            caseId: caseId
+            caseId: caseId,
+            isBinNotAvailable: isBinNotAvailable
         }
     }
     catch (error) {

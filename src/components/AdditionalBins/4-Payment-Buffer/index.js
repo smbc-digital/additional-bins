@@ -29,6 +29,10 @@ export class PaymentBuffer extends Component {
         this.setState({ isLoading: true })
         let rawResponse = await SubmitUtil(context)
         if(rawResponse.status === 200){
+            if(rawResponse.isBinNotAvailable){
+                history.push(getPageRoute(13))
+                return
+            }
             window.location.assign(rawResponse.url)
         } else{
             history.push(getPageRoute(9))

@@ -38,5 +38,9 @@
 	{
 		"number": 12,
 		"route":"/additional-black-bin/payment-failed"
+	},
+	{
+		"number": 13,
+		"route":"/additional-black-bin/bin-not-avialable"
 	}
 ]

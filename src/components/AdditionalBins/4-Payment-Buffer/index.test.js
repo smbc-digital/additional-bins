@@ -20,7 +20,7 @@ describe('PaymentBuffer', () => {
         const data = {}
         const history = { push: jest.fn() }
         window.location.assign = jest.fn()
-        submitForm.default = jest.fn().mockReturnValue({ status: 200, url: url })
+        submitForm.default = jest.fn().mockReturnValue({ status: 200, url: url, isBinNotAvailable: false })
 
         const wrapper = mount(<PaymentBuffer context={data} history={history} />)
         
@@ -30,6 +30,25 @@ describe('PaymentBuffer', () => {
 		// Assert
         expect(window.location.assign).toHaveBeenCalledWith(url)
     })
+
+
+    it('should call bin not availiable page when response is 200 and bin is not available', async () => {
+        // Arrange
+        const url = 'http://www.test.url/paymentTest'
+        const data = {}
+        const history = { push: jest.fn() }
+        window.location.assign = jest.fn()
+        submitForm.default = jest.fn().mockReturnValue({ status: 200, url: url, isBinNotAvailable: true })
+
+        const wrapper = mount(<PaymentBuffer context={data} history={history} />)
+        
+       // Act
+		await wrapper.find('form').simulate('submit')
+
+		// Assert
+        expect(history.push).toHaveBeenCalledWith(getPageRoute(13))
+    })
+
 
     it('should call push on submit with an error page when reponse is not 200', async () => {
         // Arrange

@@ -12,6 +12,7 @@ import OrderRecyclingBins from '../AdditionalBins/8-Order-Recycling-Bins'
 import SubmitYourForm from '../AdditionalBins/5-Submit-Your-Form'
 import FailurePage from '../AdditionalBins/9-Failure-Page'
 import FailedPayment from '../AdditionalBins/12-FailedPayment'
+import BinNotAvailable from '../AdditionalBins/13-BinNotAvailable'
 
 class App extends Component {
     render() {
@@ -27,6 +28,7 @@ class App extends Component {
                 <Route exact path={getPageRoute(8)} component={ OrderRecyclingBins } />
                 <Route exact path={getPageRoute(9)} component={ FailurePage } />
                 <Route exact path={getPageRoute(12)} component={ FailedPayment } />
+                <Route exact path={getPageRoute(13)} component={ BinNotAvailable } />
                 <Route exact path="/error" component={ ErrorPage } />
             </Switch>
         )
