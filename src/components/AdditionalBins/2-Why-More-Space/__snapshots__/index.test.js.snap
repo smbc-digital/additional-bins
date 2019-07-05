@@ -14,9 +14,10 @@ Array [
     <fieldset>
       <div
         className="input-radio-container"
+        role="radiogroup"
       >
         <input
-          defaultChecked={false}
+          checked={false}
           disabled={undefined}
           id="disposable-nappies"
           name="whyMoreSpace"
@@ -32,9 +33,10 @@ Array [
       </div>
       <div
         className="input-radio-container"
+        role="radiogroup"
       >
         <input
-          defaultChecked={false}
+          checked={false}
           disabled={undefined}
           id="medical-healthcare"
           name="whyMoreSpace"
@@ -50,9 +52,10 @@ Array [
       </div>
       <div
         className="input-radio-container"
+        role="radiogroup"
       >
         <input
-          defaultChecked={false}
+          checked={false}
           disabled={undefined}
           id="more-people"
           name="whyMoreSpace"
@@ -68,9 +71,10 @@ Array [
       </div>
       <div
         className="input-radio-container"
+        role="radiogroup"
       >
         <input
-          defaultChecked={false}
+          checked={false}
           disabled={undefined}
           id="other"
           name="whyMoreSpace"
@@ -89,6 +93,7 @@ Array [
       className="button-primary"
       disabled={true}
       id={undefined}
+      onClick={undefined}
       type="submit"
     >
       Next step

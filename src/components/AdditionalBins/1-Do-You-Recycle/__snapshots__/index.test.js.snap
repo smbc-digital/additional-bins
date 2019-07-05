@@ -13,9 +13,10 @@ exports[`DoYouRecycle snapshot renders correctly 1`] = `
   <fieldset>
     <div
       className="input-radio-container"
+      role="radiogroup"
     >
       <input
-        defaultChecked={false}
+        checked={false}
         disabled={undefined}
         id="not-enough-space"
         name="doYouRecycle"
@@ -31,9 +32,10 @@ exports[`DoYouRecycle snapshot renders correctly 1`] = `
     </div>
     <div
       className="input-radio-container"
+      role="radiogroup"
     >
       <input
-        defaultChecked={false}
+        checked={false}
         disabled={undefined}
         id="what-can-i-recycle"
         name="doYouRecycle"
@@ -49,9 +51,10 @@ exports[`DoYouRecycle snapshot renders correctly 1`] = `
     </div>
     <div
       className="input-radio-container"
+      role="radiogroup"
     >
       <input
-        defaultChecked={false}
+        checked={false}
         disabled={undefined}
         id="Yes"
         name="doYouRecycle"
@@ -70,6 +73,7 @@ exports[`DoYouRecycle snapshot renders correctly 1`] = `
     className="button-primary"
     disabled={true}
     id={undefined}
+    onClick={undefined}
     type="submit"
   >
     Next step

@@ -14,7 +14,6 @@ describe('BinNotAvailable', () => {
             const tree = renderer
                 .create(<BinNotAvailable />)
                 .toJSON()
-                
             expect(tree).toMatchSnapshot()
         })
     })
