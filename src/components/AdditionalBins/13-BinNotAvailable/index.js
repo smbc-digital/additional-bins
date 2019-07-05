@@ -6,8 +6,14 @@ class BinNotAvailable extends Component {
     }
 
     render() {
-        return <section>
-            <h1>We’re sorry, but you can’t use this form</h1>
+        return <form>
+            <div className="ineligible-warning">
+                <div className="header-container">
+                <div>
+                        <i className="fa fa-exclamation" aria-hidden="true"></i>
+                </div>
+                <h1> We&apos;re sorry but you can&apos;t use this form</h1>
+            </div>
             <h2>Why not?</h2>
             <p>You must live in a property that already has a black wheelie bin.</p>
             <p>To be eligible for an additional black wheelie bin, you must have enough outside space to store it off the road.
@@ -18,7 +24,8 @@ class BinNotAvailable extends Component {
             space for your current non-recyclable waste, please call us on <strong>0161 217 6111</strong> to discuss your needs.
             </p>
             <a href="https://www.stockport.gov.uk" className="button-primary">Go to the homepage</a>
-        </section>
+            </div>
+            </form>
     }
 }
 
