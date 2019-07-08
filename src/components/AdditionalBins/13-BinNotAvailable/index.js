@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
+import showBreadCrumbs from '../../../helpers/breadcrumbHelper'
+import showAToZFooter from '../../../helpers/aToZFooterHelper'
 
 class BinNotAvailable extends Component {
     constructor(props) {
         super(props)
+    }
+
+    componentDidMount() {
+        showBreadCrumbs(true)
+        showAToZFooter(true)
     }
 
     render() {
