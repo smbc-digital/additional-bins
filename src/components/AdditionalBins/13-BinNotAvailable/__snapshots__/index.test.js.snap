@@ -31,20 +31,12 @@ exports[`BinNotAvailable snapshot renders correctly 1`] = `
       What you can do next
     </h2>
     <p>
-      please call us on 
+      Please call us on 
       <strong>
         0161 217 6111
       </strong>
-       to discuss your needs if you think:
+       if you think you're still eligible for an additional black wheelie bin or you don't have enough space for your current non-recyclable waste.
     </p>
-    <ul>
-      <li>
-        you're eligible for an additional black wheelie bin
-      </li>
-      <li>
-        you don't have enough space for your current non-recyclable waste
-      </li>
-    </ul>
     <a
       className="button-primary"
       href="https://www.stockport.gov.uk"
