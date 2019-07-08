@@ -27,9 +27,11 @@ class BinNotAvailable extends Component {
                 Properties that are not eligible include; flats above shops or terrace properties without a garden.
             </p>
             <h2>What you can do next</h2>
-            <p>If you still think you’re eligible for an additional black wheelie bin or you don’t have enough
-            space for your current non-recyclable waste, please call us on <strong>0161 217 6111</strong> to discuss your needs.
-            </p>
+            <p>please call us on <strong>0161 217 6111</strong> to discuss your needs if you think:</p>
+            <ul>
+                <li>you&apos;re eligible for an additional black wheelie bin</li>
+                <li>you don&apos;t have enough space for your current non-recyclable waste</li>
+            </ul>
             <a href="https://www.stockport.gov.uk" className="button-primary">Go to the homepage</a>
             </div>
             </form>
