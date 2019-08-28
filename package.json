@@ -23,7 +23,7 @@
 	},
 	"homepage": "https://github.com/smbc-digital/additional-bins#readme",
 	"dependencies": {
-		"await-timeout": "^0.2.0",
+		"await-timeout": "^0.6.0",
 		"isomorphic-fetch": "^2.2.1",
 		"moment": "^2.22.2",
 		"query-string": "^5.1.1",
