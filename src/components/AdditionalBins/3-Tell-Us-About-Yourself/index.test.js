@@ -2,11 +2,11 @@ import React from 'react'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { TellUsAboutYourself } from './index'
-import renderer from 'react-test-renderer'
+// import renderer from 'react-test-renderer'
 import getPageRoute from '../../../helpers/pagehelper'
 
 Enzyme.configure({ adapter: new Adapter() })
-describe('TellUsAboutYourself',() => { 
+describe('TellUsAboutYourself',() => {
 
 
 it('should submit the form and go to page 4 when user does not select other on the previous page', () => {
@@ -77,17 +77,17 @@ it('should submit the form and go to page 4 when user does not select other on t
                 isValid: true
             }
         }
-    
+
         const wrapper = mount(<TellUsAboutYourself context={context} history={history} />)
-    
+
         // Act
         await wrapper.find('form').simulate('submit')
-    
+
         // Assert
         expect(history.push).toHaveBeenCalledWith(getPageRoute(5))
         })
 
-    it('should find the elements required',() => { 
+    it('should find the elements required',() => {
         // Arrange
         const context = {
             address : {
@@ -140,13 +140,13 @@ it('should submit the form and go to page 4 when user does not select other on t
                 isValid: false
             }
         }
-    
+
         const wrapper = mount(<TellUsAboutYourself history={history} context={context}/>)
-    
+
         expect(wrapper.find('#addressLine1').exists()).toBeFalsy()
     })
 
-    it('should enable next step button when all inputs are valid',() => { 
+    it('should enable next step button when all inputs are valid',() => {
         // Arrange
 		const context = {
             address : {
@@ -177,37 +177,37 @@ it('should submit the form and go to page 4 when user does not select other on t
         expect(wrapper.find('button').at(1).props().disabled).toBeFalsy()
     })
 
-    describe('snapshot', () => {
-    it('renders correctly', () => {
-        const context = {
-            address : {
-                value: 'a',
-                isValid: false
-            },
-            firstName : {
-                value: 'b',
-                isValid: false
-            },
-            lastName : {
-                value: 'c',
-                isValid: false
-            },
-            emailAddress : {
-                value: 'd',
-                isValid: false
-            },
-            phoneNumber : {
-                value: 'e',
-                isValid: false
-            }
-        }
+    // describe('snapshot', () => {
+    //     it('renders correctly', () => {
+    //         const context = {
+    //             address : {
+    //                 value: 'a',
+    //                 isValid: false
+    //             },
+    //             firstName : {
+    //                 value: 'b',
+    //                 isValid: false
+    //             },
+    //             lastName : {
+    //                 value: 'c',
+    //                 isValid: false
+    //             },
+    //             emailAddress : {
+    //                 value: 'd',
+    //                 isValid: false
+    //             },
+    //             phoneNumber : {
+    //                 value: 'e',
+    //                 isValid: false
+    //             }
+    //         }
 
 
-        const tree = renderer
-            .create(< TellUsAboutYourself context={context} />)
-            .toJSON()
-        expect(tree).toMatchSnapshot()
-    })
-})
+    //         const tree = renderer
+    //             .create(< TellUsAboutYourself context={context} />)
+    //             .toJSON()
+    //         expect(tree).toMatchSnapshot()
+    //     })
+    // })
 
 })
