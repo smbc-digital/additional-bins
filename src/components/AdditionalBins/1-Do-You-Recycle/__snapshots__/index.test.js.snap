@@ -13,7 +13,6 @@ exports[`DoYouRecycle snapshot renders correctly 1`] = `
   <fieldset>
     <div
       className="input-radio-container"
-      role="radiogroup"
     >
       <input
         checked={false}
@@ -32,7 +31,6 @@ exports[`DoYouRecycle snapshot renders correctly 1`] = `
     </div>
     <div
       className="input-radio-container"
-      role="radiogroup"
     >
       <input
         checked={false}
@@ -51,7 +49,6 @@ exports[`DoYouRecycle snapshot renders correctly 1`] = `
     </div>
     <div
       className="input-radio-container"
-      role="radiogroup"
     >
       <input
         checked={false}
