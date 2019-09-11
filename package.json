@@ -33,7 +33,7 @@
 		"react-google-recaptcha": "^1.1.0",
 		"react-router": "^4.3.1",
 		"sanitize-html": "^1.20.0",
-		"smbc-react-components": "^4.1.80"
+		"smbc-react-components": "^4.2.3"
 	},
 	"devDependencies": {
 		"babel-core": "^6.26.3",
@@ -68,6 +68,9 @@
 		"coverageReporters": [
 			"text",
 			"json-summary"
+		],
+		"transformIgnorePatterns": [
+			"/node_modules/(?!smbc-react-components).+\\.js$"
 		],
 		"testURL": "http://localhost",
 		"coverageThreshold": {
