@@ -2,7 +2,7 @@ import React from 'react'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { TellUsAboutYourself } from './index'
-// import renderer from 'react-test-renderer'
+import renderer from 'react-test-renderer'
 import getPageRoute from '../../../helpers/pagehelper'
 
 Enzyme.configure({ adapter: new Adapter() })
@@ -14,7 +14,7 @@ it('should submit the form and go to page 4 when user does not select other on t
     const history = { push: jest.fn() }
     const context = {
         address : {
-            value: '',
+            value: {},
             isValid: false
         },
         firstName : {
@@ -36,7 +36,8 @@ it('should submit the form and go to page 4 when user does not select other on t
         whyMoreSpace : {
             value: 'test',
             isValid: true
-        }
+        },
+        onChange: jest.fn()
     }
 
     const wrapper = mount(<TellUsAboutYourself context={context} history={history} />)
@@ -53,7 +54,7 @@ it('should submit the form and go to page 4 when user does not select other on t
         const history = { push: jest.fn() }
         const context = {
             address : {
-                value: '',
+                value: {},
                 isValid: false
             },
             firstName : {
@@ -75,7 +76,8 @@ it('should submit the form and go to page 4 when user does not select other on t
             whyMoreSpace : {
                 value: 'WAS',
                 isValid: true
-            }
+            },
+            onChange: jest.fn()
         }
 
         const wrapper = mount(<TellUsAboutYourself context={context} history={history} />)
@@ -91,7 +93,7 @@ it('should submit the form and go to page 4 when user does not select other on t
         // Arrange
         const context = {
             address : {
-                value: '',
+                value: {},
                 isValid: false
             },
             firstName : {
@@ -109,7 +111,8 @@ it('should submit the form and go to page 4 when user does not select other on t
             phoneNumber : {
                 value: '',
                 isValid: false
-            }
+            },
+            onChange: jest.fn()
         }
         // Act
         const wrapper = mount(<TellUsAboutYourself context={context} history={history}/>)
@@ -120,7 +123,7 @@ it('should submit the form and go to page 4 when user does not select other on t
         const history = { push: jest.fn() }
 		const context = {
             address : {
-                value: '',
+                value: {},
                 isValid: false
             },
             firstName : {
@@ -138,7 +141,8 @@ it('should submit the form and go to page 4 when user does not select other on t
             phoneNumber : {
                 value: '',
                 isValid: false
-            }
+            },
+            onChange: jest.fn()
         }
 
         const wrapper = mount(<TellUsAboutYourself history={history} context={context}/>)
@@ -150,7 +154,7 @@ it('should submit the form and go to page 4 when user does not select other on t
         // Arrange
 		const context = {
             address : {
-                value: 'a',
+                value: {},
                 isValid: true
             },
             firstName : {
@@ -168,46 +172,55 @@ it('should submit the form and go to page 4 when user does not select other on t
             phoneNumber : {
                 value: 'e',
                 isValid: false
-            }
+            },
+            onChange: jest.fn()
         }
+        const history = { 
+            push: jest.fn()
+        }
+
         // Act
-        const wrapper = mount(<TellUsAboutYourself context={context}/>)
+        const wrapper = mount(<TellUsAboutYourself context={context} history={history}/>)
 
         // Assert
         expect(wrapper.find('button').at(1).props().disabled).toBeFalsy()
     })
 
-    // describe('snapshot', () => {
-    //     it('renders correctly', () => {
-    //         const context = {
-    //             address : {
-    //                 value: 'a',
-    //                 isValid: false
-    //             },
-    //             firstName : {
-    //                 value: 'b',
-    //                 isValid: false
-    //             },
-    //             lastName : {
-    //                 value: 'c',
-    //                 isValid: false
-    //             },
-    //             emailAddress : {
-    //                 value: 'd',
-    //                 isValid: false
-    //             },
-    //             phoneNumber : {
-    //                 value: 'e',
-    //                 isValid: false
-    //             }
-    //         }
+    describe('snapshot', () => {
+        it('renders correctly', () => {
+            const context = {
+                address : {
+                    value: {},
+                    isValid: false
+                },
+                firstName : {
+                    value: 'b',
+                    isValid: false
+                },
+                lastName : {
+                    value: 'c',
+                    isValid: false
+                },
+                emailAddress : {
+                    value: 'd',
+                    isValid: false
+                },
+                phoneNumber : {
+                    value: 'e',
+                    isValid: false
+                },
+                onChange: jest.fn()
+            }
+            const history = {
+                push: jest.fn()
+            }
 
 
-    //         const tree = renderer
-    //             .create(< TellUsAboutYourself context={context} />)
-    //             .toJSON()
-    //         expect(tree).toMatchSnapshot()
-    //     })
-    // })
+            const tree = renderer
+                .create(< TellUsAboutYourself context={context} history={history} />)
+                .toJSON()
+            expect(tree).toMatchSnapshot()
+        })
+    })
 
 })

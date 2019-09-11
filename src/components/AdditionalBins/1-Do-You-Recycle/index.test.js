@@ -15,7 +15,8 @@ describe('DoYouRecycle', () => {
             doYouRecycle: {
                 value: 'not-enough-space',
                 isValid : true
-            }
+            },
+            onChange: jest.fn()
         }
 
 		// Act
@@ -34,7 +35,8 @@ describe('DoYouRecycle', () => {
             doYouRecycle: {
                 value: 'what-can-i-recycle',
                 isValid : true
-            }
+            },
+            onChange: jest.fn()
         }
 
 		// Act
@@ -52,7 +54,8 @@ describe('DoYouRecycle', () => {
             doYouRecycle: {
                 value: 'true',
                 isValid : true
-            }
+            },
+            onChange: jest.fn()
         }
 
 		// Act
@@ -69,7 +72,8 @@ describe('DoYouRecycle', () => {
             doYouRecycle: {
                 value: '',
                 isValid : false
-            }
+            },
+            onChange: jest.fn()
 		}
 		// Act
 		const wrapper = mount(<DoYouRecycle context={context} history={history}/>)
@@ -84,7 +88,8 @@ describe('DoYouRecycle', () => {
                 doYouRecycle: {
                     value: '',
                     isValid : false
-                }
+                },
+                onChange: jest.fn()
             }
 
             const tree = renderer

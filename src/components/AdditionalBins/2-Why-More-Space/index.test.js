@@ -18,7 +18,8 @@ describe('WhyMoreSpace', () => {
             whyMoreSpaceOther: {
                 value: '',
                 isValid: false
-            }
+            },
+            onChange: jest.fn()
         }
         const wrapper = mount(<WhyMoreSpace history={history} context={context} />)
         
@@ -40,7 +41,8 @@ describe('WhyMoreSpace', () => {
             whyMoreSpaceOther: {
                 value: '',
                 isValid: false
-            }
+            },
+            onChange: jest.fn()
         }
         const wrapper = mount(<WhyMoreSpace history={history} context={context} />)
 
@@ -58,7 +60,8 @@ describe('WhyMoreSpace', () => {
             whyMoreSpaceOther: {
                 value: '',
                 isValid: false
-            }
+            },
+            onChange: jest.fn()
         }
         const wrapper = mount(<WhyMoreSpace history={{}} context={context} />)
 
@@ -76,11 +79,15 @@ describe('WhyMoreSpace', () => {
                 whyMoreSpaceOther: {
                     value: '',
                     isValid: false
-                }
+                },
+                onChange: jest.fn()
+            }
+            const history = {
+                push: jest.fn()
             }
 
             const tree = renderer
-                .create(<WhyMoreSpace context={context} />)
+                .create(<WhyMoreSpace context={context} history={history}/>)
                 .toJSON()
                 
             expect(tree).toMatchSnapshot()

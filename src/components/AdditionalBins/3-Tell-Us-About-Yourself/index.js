@@ -32,10 +32,10 @@ export class TellUsAboutYourself extends Component {
                 <form onSubmit={this.onSubmit}>
                     <h1>Request an additional black bin</h1>
                     <h2>Tell us about yourself</h2>
-                    <TextInputContainer onChange={onChange} value={firstName.value} optional={false} maxLength='35' id='firstName' type='text' label='First name' />
-                    <TextInputContainer onChange={onChange} value={lastName.value} optional={false} maxLength='60' id='lastName' type='text' label='Last name' />
-                    <TextInputContainer onChange={onChange} value={phoneNumber.value} optional={true} maxLength='60' id='phoneNumber' type='tel' label='Phone number' />
-                    <TextInputContainer onChange={onChange} value={emailAddress.value} optional={false}  maxLength='60' id='emailAddress' type='email' label='Email address' />
+                    <TextInputContainer onChange={onChange} value={firstName.value} optional={false} maxLength={35} id='firstName' type='text' label='First name' />
+                    <TextInputContainer onChange={onChange} value={lastName.value} optional={false} maxLength={60} id='lastName' type='text' label='Last name' />
+                    <TextInputContainer onChange={onChange} value={phoneNumber.value} optional={true} maxLength={60} id='phoneNumber' type='tel' label='Phone number' />
+                    <TextInputContainer onChange={onChange} value={emailAddress.value} optional={false}  maxLength={60} id='emailAddress' type='email' label='Email address' />
                     <AddressPicker
                             name={'address'}
                             address={address.value}

@@ -130,9 +130,12 @@ describe('PaymentBuffer', () => {
                     isValid: false
                 }
             }
+            const history = {
+                push: jest.fn()
+            }
 
             const tree = renderer
-                .create(<PaymentBuffer context={context} />)
+                .create(<PaymentBuffer context={context} history={history} />)
                 .toJSON()
                 
             expect(tree).toMatchSnapshot()
