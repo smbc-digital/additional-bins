@@ -57,6 +57,7 @@ export const WhyMoreSpace = ({ context: { onChange, whyMoreSpace, whyMoreSpaceOt
                     onChange={onChange}
                     value={whyMoreSpace.value}
                     displayHeading={false}
+                    legend='Why do you need more space?'
                 />
                 <Button label='Next step' isValid={whyMoreSpace.value === 'WAS' ? whyMoreSpaceOther.isValid : whyMoreSpace.isValid} />
             </form>

@@ -11,6 +11,11 @@ exports[`DoYouRecycle snapshot renders correctly 1`] = `
     Do you recycle as much as possible?
   </h2>
   <fieldset>
+    <legend
+      className="sr-only"
+    >
+      Do you recycle as much as possible?
+    </legend>
     <div
       className="input-radio-container"
     >

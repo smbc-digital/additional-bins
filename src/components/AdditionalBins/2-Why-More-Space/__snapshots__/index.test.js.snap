@@ -12,6 +12,11 @@ Array [
       Select the main reason you need more space in your black bin
     </h2>
     <fieldset>
+      <legend
+        className="sr-only"
+      >
+        Why do you need more space?
+      </legend>
       <div
         className="input-radio-container"
       >

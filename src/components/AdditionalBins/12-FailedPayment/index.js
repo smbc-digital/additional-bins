@@ -22,7 +22,7 @@ class FailedPayment extends Component {
             <div className="ineligible-warning">
             <div className="header-container">
                 <div>
-                    <i className="fa fa-exclamation" aria-hidden="true" />
+                    <span className="fa fa-exclamation" aria-hidden="true" />
                 </div>
                 <h1> We&apos;re sorry, the payment was unsuccessful</h1>
             </div>

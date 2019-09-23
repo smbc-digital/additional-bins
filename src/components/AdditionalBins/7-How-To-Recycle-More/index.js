@@ -25,7 +25,7 @@ export class HowToRecycleMore extends Component {
                     <div className="header-container">
                     
                     <div>
-                        <i className="fa fa-exclamation" aria-hidden="true"></i>
+                        <span className="fa fa-exclamation" aria-hidden="true"></span>
                     </div>
                     
                     <h1> We&apos;re sorry but you can&apos;t request an additional black bin</h1>

@@ -49,6 +49,7 @@ export const DoYouRecycle = ({ context: { onChange, doYouRecycle }, history}) =>
 					onChange={onChange}
 					value={doYouRecycle.value}
 					displayHeading={false}
+					legend='Do you recycle as much as possible?'
 				/>
 				<Button label='Next step' isValid={doYouRecycle.isValid} />
 			</form>

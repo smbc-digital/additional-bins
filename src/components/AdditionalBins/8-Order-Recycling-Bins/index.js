@@ -26,7 +26,7 @@ export class OrderRecyclingBins extends Component {
 					<div className="ineligible-warning">
 						<div className="header-container">
 							<div>
-								<i className="fa fa-exclamation" aria-hidden="true" />
+								<span className="fa fa-exclamation" aria-hidden="true" />
 							</div>
 							<h1>It looks like you need additional recycling bins</h1>
 						</div>

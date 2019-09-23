@@ -17,7 +17,7 @@ class BinNotAvailable extends Component {
             <div className="ineligible-warning">
                 <div className="header-container">
                 <div>
-                        <i className="fa fa-exclamation" aria-hidden="true"></i>
+                        <span className="fa fa-exclamation" aria-hidden="true"></span>
                 </div>
                 <h1> We&apos;re sorry but you can&apos;t use this form</h1>
             </div>
