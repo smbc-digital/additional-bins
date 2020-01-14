@@ -10,7 +10,10 @@ exports[`DoYouRecycle snapshot renders correctly 1`] = `
   <h2>
     Do you recycle as much as possible?
   </h2>
-  <fieldset>
+  <fieldset
+    aria-label={undefined}
+    role="radiogroup"
+  >
     <legend
       className="sr-only"
     >

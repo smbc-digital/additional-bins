@@ -11,7 +11,10 @@ Array [
     <h2>
       Select the main reason you need more space in your black bin
     </h2>
-    <fieldset>
+    <fieldset
+      aria-label={undefined}
+      role="radiogroup"
+    >
       <legend
         className="sr-only"
       >

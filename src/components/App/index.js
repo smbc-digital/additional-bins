@@ -13,6 +13,7 @@ import SubmitYourForm from '../AdditionalBins/5-Submit-Your-Form'
 import FailurePage from '../AdditionalBins/9-Failure-Page'
 import FailedPayment from '../AdditionalBins/12-FailedPayment'
 import BinNotAvailable from '../AdditionalBins/13-BinNotAvailable'
+import DeclinedPayment from '../AdditionalBins/14-DeclinedPayment'
 
 class App extends Component {
     render() {
@@ -29,6 +30,7 @@ class App extends Component {
                 <Route exact path={getPageRoute(9)} component={ FailurePage } />
                 <Route exact path={getPageRoute(12)} component={ FailedPayment } />
                 <Route exact path={getPageRoute(13)} component={ BinNotAvailable } />
+                <Route exact path={getPageRoute(14)} component={ DeclinedPayment } />
                 <Route exact path="/error" component={ ErrorPage } />
             </Switch>
         )

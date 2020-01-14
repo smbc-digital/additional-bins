@@ -42,5 +42,9 @@
 	{
 		"number": 13,
 		"route":"/additional-black-bin/bin-not-available"
+	},
+	{
+		"number": 14,
+		"route":"/additional-black-bin/payment-declined"
 	}
 ]
