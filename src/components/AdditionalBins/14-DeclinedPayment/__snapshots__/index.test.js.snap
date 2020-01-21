@@ -15,7 +15,7 @@ exports[`DeclinedPayment snapshot should render correctly 1`] = `
         />
       </div>
       <h1>
-         Your payment was declined
+        Your payment was declined
       </h1>
     </div>
     <p
