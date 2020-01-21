@@ -24,10 +24,10 @@ class DeclinedPayment extends Component {
                 <div>
                     <span className="fa fa-exclamation" aria-hidden="true" />
                 </div>
-                <h1> We&apos;re sorry, the payment was declined</h1>
+                <h1>Your payment was declined</h1>
             </div>
-            <p className="no-margin-bottom">Please try again if you want to continue with the order.</p>
-            <a className="button-primary" href={parsedQueryString.paymenturl}>Continue with the order</a>
+            <p className="no-margin-bottom">Contact your bank for more details. No money has been taken from your account.</p>
+            <a className="button-primary" href={parsedQueryString.paymenturl}>CGo back to try the payment again</a>
             <a className="button-secondary anchor-as-block" href="https://www.stockport.gov.uk/">Go to the homepage</a>
         </div>
         </form>  
